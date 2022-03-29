@@ -120,7 +120,7 @@
 > Nacional de Trujillo(Perú) con 15 años de experiencia en la industria
 > Oil&Gas en las áreas de HSE y WellServices.
 
-> - Alejo: ***[alejofdlq5](https://github.com/alejofdlq5)*** 
+> - Alejo: ***[alejofdlq](https://github.com/alejofdlq)*** 
 > > Programador Junior, 19 años, interesado en el desarrollo de Software y la programación de Videojuegos. Me gusta aprender constantemente y estoy en busca de sumar experiencia para poder desarrollarme profesionalmente haciendo lo que más me gusta que es programar.
 
 >Gabriel barressi 27 años
