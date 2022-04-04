@@ -11,4 +11,11 @@ app.get('/', function (req, res) {
     res.sendFile(htmlPath);
 })
 
+app.get('/login', function (req, res) {
+    let htmlPath = path.resolve(__dirname, './src/views/login.html');
+    res.sendFile(htmlPath);
+})
+
+
+
 app.listen(PORT, () => console.log('Servidor corriendo en el puerto ' + PORT))
