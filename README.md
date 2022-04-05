@@ -124,7 +124,7 @@
 > > Programador Junior, 19 años, interesado en el desarrollo de Software y la programación de Videojuegos. Me gusta aprender constantemente y estoy en busca de sumar experiencia para poder desarrollarme profesionalmente haciendo lo que más me gusta que es programar.
 
 > - Gabriel Barressi:  ***[GBarressi1994](https://github.com/GBarressi1994)***
-> 27 años, laburo en banco Itaú en la tesorería hace 6 años, soy programador de Java y tengo algunos emprendimientos más aparte.
+> > 27 años, laburo en banco Itaú en la tesorería hace 6 años, soy programador de Java y tengo algunos emprendimientos más aparte.
 
 https://miro.com/app/board/uXjVOFLbSMs=/ 
 >Link del wireframe
