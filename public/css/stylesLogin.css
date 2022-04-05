@@ -63,6 +63,7 @@ main {
     border-radius: 6px;
     border: 1px solid coral;
     text-align: center;
+    border-color: #0C4207;
 }
 
 .hidden {
