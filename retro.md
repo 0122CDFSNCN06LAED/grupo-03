@@ -1,3 +1,6 @@
+
+# SPRINT 2
+
 El grupo funciona bastante bien por lo que fuimos experimentando en los últimos días. En cuanto a química y organización. La retrospectiva que pudimos hacer en cuanto a los puntos dados por el “Starfish Retrospective”. Fueron: 
 
 en Start Doing: 
@@ -31,3 +34,29 @@ En Stop Doing:
 Link al tablero: https://app.mural.co/invitation/mural/biofisica5105/1649022513276?sender=uf2c8a31901b11cba53510030&key=51d9b4ad-ba9f-430f-9a20-5a772dae20db.
 
 Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador
+
+
+# SPRINT 3
+
+## Avances
+-   Se generaron las vistas (html) del home, register, login, con sus respectivos css.
+
+## Pendientes
+-   Está pendiente carrito de compras y detalle de producto(html y css).
+-   Homogenizar estilos entre las páginas
+
+
+Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador
+
+
+
+
+# SPRINT 4
+
+# SPRINT 5
+
+# SPRINT 6
+
+# SPRINT 7
+
+# SPRINT 8
