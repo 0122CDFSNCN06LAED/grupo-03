@@ -29,3 +29,5 @@ En Stop Doing:
 - Todavia no tenemos ningún ítem aqui, suponemos que a medida que vayamos avanzando en El Progreso del proyecto y de las clases. Esta punta de la estrella comenzara a presentarse sola.
 
 Link al tablero: https://app.mural.co/invitation/mural/biofisica5105/1649022513276?sender=uf2c8a31901b11cba53510030&key=51d9b4ad-ba9f-430f-9a20-5a772dae20db.
+
+Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador
