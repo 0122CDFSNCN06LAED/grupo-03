@@ -1,41 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./img/favicon.png"/>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>NutriFarco Industries</title>
+  <%- include("./partials/head") %> 
 </head>
+
+<header class="main-header">
+  <%- include("./partials/header") %> 
+</header>
+ 
+
 <body>
-    <header class="main-header">
-        <div class="container container--flex">
-          <div class="main-header__container">
-            <h1 class="main-header__title">NutriFarco</h1>
-            <span class="icon-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
-            <nav class="main-nav" id="main-nav">
-              <ul class="menu">
-                <li class="menu__item"><a href="" class="menu__link">HOME</a></li>
-                <li class="menu__item"><a href="" class="menu__link">ABOUT</a></li>
-                <li class="menu__item"><a href="" class="menu__link">FEATURES</a></li>
-                <li class="menu__item"><a href="" class="menu__link">SHOP</a></li>
-                <li class="menu__item"><a href="" class="menu__link">CONTACT</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="main-header__container">
-            <span class="main-header__txt">¿Necesitás ayuda?</span>
-            <p class="main-header__txt"><i class="fa-solid fa-phone-flip"></i> Llama al 1234566789</p>
-          </div>
-          <div class="main-header__container">
-            <a href="" class="main-header__btn">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="/login" class="main-header__link"><i class="fas fa-user"></i></a>
-            <input type="search" class="main-header__input" placeholder="Buscar productos"><i class="fas fa-search"></i>
-          </div>
-        </div>
-      </header>
+    
       <div class="container-slider">
         <div class="slider" id="slider">
           <div class="slider__section">
@@ -150,31 +125,7 @@
         </div>
       </main>
       <footer class="main-footer">
-        <div class="footer__section">
-          <h2 class="footer__title">ACERCA</h2>
-          <p class="footer__txt">Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at tellus. Nulla porttitor accumsana tincidunt.</p>
-        </div>
-        <div class="footer__section">
-          <h2 class="footer__title">UBICACIÓN :</h2>
-          <p class="footer__txt">5367k 5 Piso, 9 de Julio, Buenos Aires</p>
-          <h2 class="footer__title">CONTACTO</h2>
-          <p class="footer__txt">Phone : +123 123 1234 1234</p>
-          <p class="footer__txt">Email : bananero@gmail.com</p>
-        </div>
-        <div class="footer__section">
-          <h2 class="footer__title">Quick Links</h2>
-          <a href="" class="footer__link">Home</a>
-          <a href="" class="footer__link">About</a>
-          <a href="" class="footer__link">FAQ</a>
-          <a href="" class="footer__link">Shop</a>
-          <a href="" class="footer__link">Contact Us</a>
-        </div>
-        <div class="footer__section">
-          <h2 class="footer__title">Sign up for your offers</h2>
-          <p class="footer__txt">By subscribing to our mailing list you will always get latest news and updates from us.</p>
-          <input type="email" class="footer__input" placeholder="Enter your email">
-        </div>
-        <p class="copy">© 2022 Nutrifarco. All Rights Reserved | Design by Nutrifarco</p>
+        <%- include("./partials/footer") %> 
       </footer> 
       <script src="/js/slider.js"></script>
 </body>

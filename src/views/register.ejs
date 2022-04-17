@@ -2,20 +2,7 @@
 <html lang=”en”>
 
 <head>
-    <meta charset=”UTF-8″ />
-    <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documento</title>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="/css/stylesLogin.css" />
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+    <%- include("./partials/head") %>
 </head>
 
 
@@ -40,6 +27,12 @@
             
 
             <div>
+                <div class="div-input">
+                    <h3>Ingresa tu nombre y apellido</h3>
+                    <label class="hidden " for="nickname"><br></label>
+                    <input class="input-log" type="text" name="nickname" id="nickname" placeholder="Nombre y Apellido" />
+                </div>
+
                 <div class="div-input">
                     <h3>Ingresa tu correo electronico</h3>
                     <label class="hidden " for="nickname"><br></label>
@@ -80,16 +73,7 @@
     </main>
 
     <footer>
-
-        <div>
-            <p><a class="cuidamos" href="/privacy">
-                    Cómo cuidamos tu privacidad
-                </a>
-            </p>
-
-
-            <p class="copyright">Copyright © 2022-2040 NutriFarco S.R.L</p>
-
+        <%- include("./partials/footer-log-reg") %>
     </footer>
 </body>
 
