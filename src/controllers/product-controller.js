@@ -1,7 +1,4 @@
-const { Router } = require("express");
-const { append } = require("express/lib/response");
-const productRouter = require("../routers/product-router");
-const { get } = require("../routers/product-router");
+
 
 const productos=[
     {

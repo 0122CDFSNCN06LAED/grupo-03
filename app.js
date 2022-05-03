@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const PORT = process.env.PORT || 3000;
+app.use(express.urlencoded({ extended: false }));
 
 const productRouter = require("./src/routers/product-router.js");
 const userRouter = require("./src/routers/users-router.js");
