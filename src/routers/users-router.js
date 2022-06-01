@@ -1,30 +1,41 @@
-const { Router } = require("express");
-const { route } = require("express/lib/application");
-const userRouter = Router();
-const path = require('path');
-const { body } = require('express-validator');
+const path = require("path");
+const express=require("express");
+const userRouter = express.Router();
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+    destination: path.join(__dirname, "../../public/img/imgUsers"),
+    filename: (req, file, cb) => {
+      const fileName =
+        file.fieldname + Date.now() + path.extname(file.originalname);
+      cb(null, fileName);
+    },
+  });
+  
+  const upload = multer({
+    storage,
+  });
+
+
 
 const userController = require("../controllers/users-controller");
-//rutas users		
+const registerValidator = require("../middleware/user-regValidation");
 
+//rutas users
+userRouter.get("/login", userController.login);//Logearse
 
-const validations = [
-	body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
-	body('email')
-		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
-		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('telefono').notEmpty().withMessage(''),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('password1').notEmpty().withMessage('Tienes que confirmar la contraseña')   
+userRouter.get("/register", userController.register);//Registrase
+userRouter.post("/processRegister", registerValidator, userController.processRegister);
 
-]
+userRouter.get("/listar", userController.index);//listar
+userRouter.get("/detalle/:id", userController.detail);//detalle
 
-userRouter.get("/user/register", userController.create);//nuevo
-userRouter.post('/user/register', validations, userController.processRegister);
+userRouter.get("/edit/:id",  userController.edit);
+userRouter.delete("/:id", userController.remove);//borrar
 
-userRouter.get("/user/:id", userController.remove);//borrar
-userRouter.get("/user/:id", userController.update);//modificar
-userRouter.get("/user", userController.index);//listar
+userRouter.get("/update/:id", userController.modificar);//modificar
+userRouter.put("/:id", registerValidator,  userController.update);//modificar
+
 
 
 

@@ -26,14 +26,14 @@
         <div>
             
 
-            <div>
+            <form action="/user/processRegister" id="register" method="POST" enctype="single/form-data" >
                 <div class="div-input">
                     <h3>Ingresa tu nombre y apellido</h3>
                     <label class="hidden " for="nickname"><br></label>
                     <input class="input-log" type="text" name="nombre" id="nickname" placeholder="Nombre y Apellido" />
                     <% if (locals.errors && errors.nombre) { %>
-                        <div class="text-danger">
-                            <%= errors.fullName.msg %> 
+                        <div class="errors">
+                            <%= errors.nombre.msg %> 
                         </div>
                     <% } %>
                 </div>
@@ -43,7 +43,7 @@
                     <label class="hidden " for="nickname"><br></label>
                     <input class="input-log" type="text" name="email" id="nickname" placeholder="e-mail" />
                     <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
+                        <div class="errors">
                             <%= errors.email.msg %>
                         </div>
                     <% } %>
@@ -54,8 +54,19 @@
                     <label class="hidden " for="nickname"> <br></label>
                     <input class="input-log" type="text" name="telefono" id="nickname" placeholder="Numero de telefono" />
                     <% if (locals.errors && errors.telefono) { %>
-                        <div class="text-danger">
+                        <div class="errors">
                             <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Ingresa tu imagen</h3>
+                    <label class="hidden " for="nickname"> <br></label>
+                    <input type="file" id="imagen" name="imgUsers" class="input-log" />
+                    <% if (locals.errors && errors.imgUsers) { %>
+                        <div class="errors">
+                            <%= errors.imgUsers.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -65,7 +76,7 @@
                     <label class="hidden" for="password"><br></label>
                     <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña" />
                     <% if (locals.errors && errors.password) { %>
-                        <div class="text-danger">
+                        <div class="errors">
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
@@ -73,27 +84,26 @@
 
                 <div class="div-input">
                     <h3>Confirma tu contraseña</h3>
-                    <label class="hidden" for="password"><br></label>
-                    <input class="input-log" type="password" name="password1" id="password" placeholder="Confirmar contraseña" />
+                    <label class="hidden" for="passwordConf"><br></label>
+                    <input class="input-log" type="password" name="passwordConf" id="passwordConf" placeholder="Confirmar contraseña" />
                     <% if (locals.errors && errors.password1) { %>
-                        <div class="text-danger">
+                        <div class="errors">
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
                 </div>
+            </form>
 
                 <div class="div-bottom">
-                    <a href="/"><button class="bottom-log-continuar" type="submit">Continuar <br></button></a>
-
-                    
+                    <button class="bottom-log-continuar" onclick="comprobar()">Continuar <br></button>
+                    <a href="/"></a>
+                </div>
 
                     <p class="need-container"><a class="need" href="/help">
                                 Necesito ayuda para ingresar </a>
                     </p>
-
-
                 </div>
-            </div>
+            
         </div>
     </main>
 
@@ -101,5 +111,23 @@
         <%- include("./partials/footer-log-reg") %>
     </footer>
 </body>
+
+<script type="text/javascript">	
+	function comprobar()
+	{
+		let contraseña = document.getElementById("password").value;
+		let contraseña2 = document.getElementById("passwordConf").value;           
+        let register = document.getElementById("register");
+
+		if (contraseña===contraseña2) 
+		{
+			register.submit();
+		}
+		else
+		{
+			alert("Las contraseñas no coinciden");
+		}
+	}
+</script>
 
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+    <head>
+        <%- include("./partials/head") %>
+    </head>
+
+
+    <body class="body">
+
+        <header>
+            <div class="header-div">
+                <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+
+            </div>
+
+            <h1>
+                NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+            </h1>
+
+        </header>
+
+
+        <main>
+
+            <div>
+                
+
+                
+                <form action="/user/<%= user.id %>?_method=PUT" id="userEdit" method="POST" enctype="single/form-data">                      
+                    <div class="div-input">
+                        <h3>Ingresa tu nuevo nombre y apellido</h3>
+                        <label class="hidden " for="nickname"><br></label>
+                        <input class="input-log" type="text" name="nombre" id="nickname" value="<%= user.nombre %>"  />                    
+                        <% if (locals.errors && errors.nombre) { %>
+                            <div class="errors">
+                                <%= errors.nombre.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa tu correo electronico</h3>
+                        <label class="hidden " for="nickname"><br></label>
+                        <input class="input-log" type="text" name="email" id="nickname" value=<%= user.email %> />
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="errors">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa tu numero de telefono</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input class="input-log" type="text" name="telefono" id="nickname" value=<%= user.telefono %> />
+                        <% if (locals.errors && errors.telefono) { %>
+                            <div class="errors">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa tu imagen</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input type="file" id="imagen" name="imgUser" class="input-log" />
+                        <% if (locals.errors && errors.telefono) { %>
+                            <div class="errors">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                    </div
+
+                    <div class="div-input">
+                        <h3>Ingresa tu contraseña</h3>
+                        <label class="hidden" for="password"><br></label>
+                        <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña" />
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="errors">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Confirma tu contraseña</h3>
+                        <label class="hidden" for="passwordConf"><br></label>
+                        <input class="input-log" type="password" name="passwordConf" id="passwordConf" placeholder="Confirmar contraseña" />
+                        <% if (locals.errors && errors.passwordConf) { %>
+                            <div class="errors">
+                                <%= errors.passwordConf.msg %>
+                            </div>
+                        <% } %>
+                    </div> 
+                </form>   
+                    <div class="div-bottom">
+                        <div class="div-input">
+                        <button class="bottom-log-continuar" onclick="comprobar()">Modificar <br></button>
+                        <a href="/"></a>
+                    </div>
+               
+
+                <form action="/user/<%= user.id %>?_method=DELETE" method="POST" enctype="single/form-data">
+                        <div class="div-bottom">
+                    <a href="/"><button class="bottom-log-continuar" type="submit">Borrar <br></button></a>
+                </form>                                      
+                
+                    <p class="need-container"><a class="need" href="/help">
+                        Necesito ayuda para ingresar </a>
+                    </p>       
+                        
+            </div>
+        </main>
+
+        <footer>
+            <%- include("./partials/footer-log-reg") %>
+        </footer>
+    </body>
+
+    <script type="text/javascript">	
+        function comprobar()
+        {
+            let contraseña = document.getElementById("password").value;
+            let contraseña2 = document.getElementById("passwordConf").value;           
+            let userEdit = document.getElementById("userEdit");
+
+            if (contraseña===contraseña2) 
+            {
+                userEdit.submit();
+            }
+            else
+            {
+                alert("Las contraseñas no coinciden");
+                redirect('/user/update/<% user.id %>');
+            }
+        }
+    </script>
+
+
+</html>
