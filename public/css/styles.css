@@ -180,7 +180,7 @@ img {
 }
 .btn-shop{
   display: block;
-  border: 2px solid #157B09;
+  border: 2px solid #5AB902;
   color: white;
   padding: 10px;
   text-align: center;
@@ -191,6 +191,7 @@ img {
 }
 .btn-shop:hover{
   background: #157B09;
+  border-color:#157B09;
   color: white;
 }
 /* ESTILOS DE PRODUCTOS */
@@ -207,7 +208,7 @@ img {
 }
 .product:before {
   content: "50%";
-  background: #157B09;
+  background: #5AB902;
   padding: 10px;
   width: 60px;
   position: absolute;
@@ -241,6 +242,9 @@ img {
   background: #F7F7F7;
   padding: 20px;
   margin: 20px 0;
+}
+.testimonial__title {
+  color:#157B09;
 }
 .testimonial__txt{
   color: #777;
@@ -418,10 +422,10 @@ img {
     background: none;
   }
   .menu__link{
-    color: #333;
+    color: #5AB902;
   }
   .menu__link:hover{
-    background: #333;
+    background: #5AB902;
     color: white;
   }
   .container-products {

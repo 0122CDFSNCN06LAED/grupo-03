@@ -9,6 +9,7 @@ const mainController = require("../controllers/main-controller");
 mainRouter.get("/", mainController.home);				
 mainRouter.get("/login", mainController.login);
 mainRouter.get("/register", mainController.register);
+mainRouter.get("/carrito", mainController.carrito);
 
 
 
