@@ -210,5 +210,13 @@
     "telefono": "987654321",
     "password": "$2a$10$Z1R5Gb8ntdtN5hjWY1wCaenYm94BWGH3PeYs.oHHuIa8WolQQRK0m",
     "imagen": "logo-mercado-liebre"
+  },
+  {
+    "id": 28,
+    "nombre": "Makanaki",
+    "email": "maka@hotmail.com",
+    "telefono": "123123123",
+    "password": "$2a$10$kRuxMjqLm4aPSJmiEg.DUeOsRIonShHMQmIr87CzaQBQfZ2yjTJfO",
+    "imagen": "logo-mercado-liebre"
   }
 ]

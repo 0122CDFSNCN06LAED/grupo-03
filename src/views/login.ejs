@@ -14,9 +14,10 @@
 
         </div>
 
-        <h1>
-            NutriFarco<img class="img" src="./img/favicon.ico" class="logo" />
-        </h1>
+        <div class="titulo-login">
+          <h1 class="nutrifarco">NutriFarco      <img class="img-logo" src="./img/favicon.ico"/></h1>  
+        </div>
+        
 
     </header>
 
@@ -27,16 +28,18 @@
       
             <form method="post" action="/user/login">
                 <div class="div-input">
-                    <label class="hidden " for="nickname">Correo Electrónico</label>
-                    <input class="input-log" type="text" name="email" id="email" placeholder="correo@email.com" required/>
+                    <h3>Correo Electrónico</h3>
+                    <label class="hidden" for="nickname"><br></label>
+                    <input class="input-log" type="text" name="email" id="email" placeholder="correo@email.com"/>
                     </div>
 
                 <div class="div-input">
-                    <label class="hidden" for="password">Contraseña <br></label>
-                    <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña" required />
+                    <h3>Contraseña</h3>
+                    <label class="hidden" for="password"><br></label>
+                    <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña"/>
                 </div>
 
-                <div>
+                <div class="checkbox">
                     <label for="recordame" class="recordar">Recuérdame</label>
                     <input type="checkbox"  id="recordar" name="recordar">
                 </div>
@@ -44,7 +47,7 @@
 
                 <div class="div-bottom">             
                     <button class="bottom-log-continuar" type="submit">Iniciar sesión</button>
-                    <a href="/user/register"><button class="bottom-log-crear" type="submit"> Crear cuenta</button></a>              
+                    <a href="/register" class="bottom-log-crear">Crear cuenta</a>              
                     
                 </div> 
                     <p class="need-container"><a class="need" href="/help">

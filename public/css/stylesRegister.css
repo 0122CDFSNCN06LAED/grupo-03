@@ -35,11 +35,19 @@ i {
     color: rgb(155, 235, 140);
 }
 
-h1 {
-    color: #0C4207;
+.nutrifarco {
     text-align: center;
     padding: auto;
     margin-top: 70px;
+    text-align: center;
+    text-align: center;
+    font-size: 3em;
+    color: #5AB902;
+    font-family: "Poppins";
+}
+
+.titulo-login{
+    text-align: center;
 }
 
 .img {
@@ -61,7 +69,6 @@ main {
     width: 100%;
     height: 20px;
     border-radius: 6px;
-    border: 1px solid coral;
     text-align: center;
     border-color: #0C4207;
 }
