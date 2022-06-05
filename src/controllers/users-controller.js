@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcryptjs');
 const { use } = require('express/lib/router');
+const { Console } = require('console');
 
 const usersFilePath = path.join(__dirname, "../data/user-data.json");
 const userData = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -45,7 +46,7 @@ const controllers={
             imagen: req.file ? req.file.filename : "logo-mercado-liebre",
         };
         userData.push(user);
-          
+    
         const jsonTxt = JSON.stringify(userData, null, 2);
         fs.writeFileSync(usersFilePath, jsonTxt, "utf-8");
           
@@ -103,7 +104,6 @@ const controllers={
         const passEncriptada = bcrypt.hashSync('password', 10);
 
         let user = userData.find((p) => parseInt(id) == p.id);
-        console.log(parseInt(id) + " "  + user.id);
     
         Object.assign(user, {
           
@@ -141,6 +141,8 @@ const controllers={
 
         res.redirect("/"); 
     }
+
+   
 }
 
 module.exports = controllers;

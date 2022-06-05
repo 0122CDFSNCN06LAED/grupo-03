@@ -157,7 +157,7 @@ h3{
   .list_index1 {
     width: 50px;
     text-align:center;
-    margin-left: 30px;
+    margin-left: 28px;
   }
   .list_index2 {
     margin-left: 30px;
@@ -169,6 +169,12 @@ h3{
     text-align:left;
     width: 35px;
     height: 35px;
+    margin-left: 30px;
+  }
+  .list_index6 {
+    text-align:left;
+    width: 150px;
+    height:150px;
     margin-left: 30px;
   }
  .menu-list{

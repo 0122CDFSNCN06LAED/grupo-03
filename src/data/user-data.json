@@ -2,213 +2,169 @@
   {
     "id": 1,
     "nombre": "Mario Pelavski",
-    "email": "mpelavski48@gmail.com",
-    "telefono": "123456",
-    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2"
+    "email": "mp@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 2,
     "nombre": "Pedro Roggiano",
-    "email": "pr@gmail.com",
-    "telefono": "654321",
-    "password": "$2a$10$hF6f8jYyqbxppBUgL/fJJeKoGFbV7ULNwyMghOXI3Vv8QaoXLjWbS"
+    "email": "pr@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 3,
     "nombre": "Pepe Cibrian",
-    "email": "rr@hhhhhhhhh.com",
-    "telefono": "654321",
-    "password": "$2a$10$L/O0Nu5XcDyGYR59usAmi.sDC4vTwVOuLo.Bjo3vRELjcAANEbRD6",
+    "email": "pc@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 4,
     "nombre": "Pepe Garcia",
-    "email": "rr@hhhhhhhhh.com",
-    "telefono": "654321",
-    "password": "$2a$10$gGitkQ8eZM.bUkvEeOAtq.SajOpnf6/icXMtIKb1fkfjr4aHAYcre",
+    "email": "pg@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$F5Vipzn/V47URBzMQAFEmOdB/FB6Pi8YFdi5WQvX2BAH1I8FKskZ6",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 5,
     "nombre": "Fernando Farago",
-    "email": "ff@hhhhhhhhh.com",
-    "telefono": "654321",
-    "password": "$2a$10$BzmlsHVN5qOqiPlGse9ee.AkVnyA5vX3v.HLgZIYzlzYBFcA6bEKu",
+    "email": "ff@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 6,
     "nombre": "Carlos Melconian",
-    "email": "rr@hhhhhhhhh.com",
-    "telefono": "654321",
-    "password": "$2a$10$VZIje1C34Jf6OFX6cARRVOTu0mNcPPkwTw6R9X3S.Z6wuX0kauPxG"
+    "email": "cm@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": "7",
     "nombre": "Andres Fargosi",
-    "email": "af@dialup.com",
-    "telefono": "963852741",
-    "password": "$2a$10$ycFkftoL9WAkFiPWXTsvU.iwmB/ryQCy5gO5oYpVn9LDE9IsM9/AS",
+    "email": "af@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 8,
     "nombre": "Juvenal Chacon",
     "email": "jc@dialup.com.ar",
-    "telefono": "7412589663",
-    "password": "$2a$10$R6/tFTlBUYtHFDFGwFtMUO0xCJBwjhmIYflNUzG3bVDos2gC712pu"
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 9,
     "nombre": "Carlos Tarica",
-    "email": "ct@hhhhh.com",
-    "telefono": "258974631",
-    "password": "$2a$10$i1nYp6OHecRLXZgwS8Vd6Ot72E/WwtdaxTFZDQguWqHaLmtf1dXHm"
+    "email": "ct@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 10,
     "nombre": "Mariano Maccarrone",
-    "email": "mm@sssssssss.com",
-    "telefono": "159753",
-    "password": "$2a$10$2pjXURm4Ozc2g7y9RdpLeeKa8XEfMKRCUDpk0COwYIepkoPcIcfJ."
+    "email": "mm@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 11,
     "nombre": "Jorge Bogado",
     "email": "jb@dialup.com.ar",
-    "telefono": "357951456",
-    "password": "$2a$10$yicWaw5sXBIwGsj5O6IqKOBQhcL.0VyqC80p9IrH5RJ60R3TqY1/G"
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 12,
     "nombre": "Jose Hochbaum",
-    "email": "jh@ffffffffff.com",
-    "telefono": "789512357",
-    "password": "$2a$10$EzRTmduL2eT6YDcFKsjxqOZmPQ1sYAvfJR4v4ly7wJficI012m1Ge"
+    "email": "jh@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 13,
     "nombre": "Rene Favaloro",
-    "email": "rf@ggggggg.com",
-    "telefono": "594826",
-    "password": "$2a$10$bKleILuQ/obhM6QKzTZYvOZlL95nf0vAtkO3cUaj6qcE2OvoKW3Bq"
+    "email": "rf@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 14,
     "nombre": "Edgardo Fletcher",
-    "email": "ef@nnnnnnnnn.con",
-    "telefono": "456897",
-    "password": "$2a$10$UiAsOorIjlkAdtOgiIH.kOnpe4hr/8n07lydEFTsU3gCQ57HqsbmS"
+    "email": "ef@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 15,
     "nombre": "Juvenal Rojas",
-    "email": "jr@sssssss.com",
-    "telefono": "15987456",
-    "password": "$2a$10$LFx2iHrmk7BvGl3GOzEAI.iTEZJGiaT/BPxjLMyXs0lKowH0/NYtm",
+    "email": "jr@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 16,
     "nombre": "Rita Rovner",
-    "email": "rr@aaaaaaaaa.com",
-    "telefono": "124578",
-    "password": "$2a$10$0eBObS.vfZhXMyOvaGOPQ.VN.RRtmqehLB2zEX4ZkkfUyY1aphmOe",
+    "email": "rr@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 17,
-    "nombre": "Pedro Roggiano",
-    "email": "nj@iiiiiiiiiiii.com",
-    "telefono": "987654321",
-    "password": "$2a$10$ww5Dx9r9MGQgmvm0m/B5H.hCu63eKoLRu0O4cOKK7IZHSbVB1YbvS",
-    "imagen": "logo-mercado-liebre",
-    "imgUser": "",
-    "passwordConf": "sssssssssssssss"
+    "nombre": "Pedro Multer",
+    "email": "pr@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 18,
-    "nombre": "Pedro Roggiano",
-    "email": "nj@iiiiiiiiiiii.com",
-    "telefono": "987654321",
-    "password": "$2a$10$ww5Dx9r9MGQgmvm0m/B5H.hCu63eKoLRu0O4cOKK7IZHSbVB1YbvS",
-    "imagen": "logo-mercado-liebre",
-    "imgUser": "",
-    "passwordConf": "sssssssssssssss"
+    "nombre": "Manuel Cywin",
+    "email": "mc@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
+    "imagen": "logo-mercado-liebre"
   },
   {
     "id": 19,
-    "nombre": "Manuel Cywin",
-    "email": "mc@cccccccc.com",
-    "telefono": "987654321",
-    "password": "$2a$10$/jPAf9fJvzUz47/22Pdbo.dy8iZzPT9xIHgxDc.QBsf5Zme16gfVy",
-    "imagen": "logo-mercado-liebre",
-    "imgUser": "Foto0297.jpg"
-  },
-  {
-    "id": 20,
     "nombre": "Marcos Polo",
-    "email": "mp@dialup.com.ar",
-    "telefono": "123456",
-    "password": "$2a$10$4TPLrG38zPqbvbbRC5Za1O/jRBXfVjS9YCzS5mw/RBtZEnIy5dXhK",
-    "imagen": "logo-mercado-liebre",
-    "imgUser": "Foto0297.jpg"
-  },
-  {
-    "id": 21,
-    "nombre": "Ricardo RoaZA",
-    "email": "rr@rrrrrrrrr.com",
-    "telefono": "123654",
-    "password": "$2a$10$Sl1kEt/Oypbfw0l7c86o9O5oQlg7RGjzJSH0B/qRlEO0umL6N3cdC",
+    "email": "mpo@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 22,
     "nombre": "Jorge Polaco",
-    "email": "aa@kkkkkkkkkk.com",
-    "telefono": "123654",
-    "password": "$2a$10$g16JmA91uaQMatvNOqxnQOWb9iSKXNlKhLm8yBhoNpJWURYk3OeRm",
+    "email": "jp@dialup.com.ar",
+    "telefono": "12345678",
+    "password": "$2a$10$ORUjt3TYDrWeC5MS0X3In.ieaAzeyTNy9jrqLEI8FU0TIN.73lio2",
     "imagen": "logo-mercado-liebre"
   },
   {
     "id": 23,
     "nombre": "Pedro Roggiano",
     "email": "mp@hhhh.com",
-    "telefono": "12345",
-    "password": "$2a$10$Y/x6dqp2hlDBgW7A35Mjfu70bEpVaLHjzCPwW/KCRxvZsosnuWLpi",
-    "imagen": "logo-mercado-liebre"
-  },
-  {
-    "id": 24,
-    "nombre": "Pedro Roggiano",
-    "email": "pr@hhhh.com",
-    "telefono": "987654321",
-    "password": "$2a$10$hvJpXEF1l6vyYiExa34TSuhVRy0wbKU2RsheZSjSIJSKetUbfJ6iC",
-    "imagen": "logo-mercado-liebre"
-  },
-  {
-    "id": 25,
-    "nombre": "Pedro Roggiano",
-    "email": "mp@aaaaa.com",
-    "telefono": "12345",
-    "password": "$2a$10$ZYh5tZ5nRzeEFDfJpVmMWeRjJcUngv89JCLmtAsMZJOZBkLxJ/FWy",
-    "imagen": "logo-mercado-liebre"
-  },
-  {
-    "id": 26,
-    "nombre": "Pedro Roggiano",
-    "email": "mp@aaaaa.com",
-    "telefono": "987654321",
-    "password": "$2a$10$DtjtgkwDVw/BiPSA0u27Je46za7jRuZ02U4CF.Xsyx7ub5UiuQzm6",
-    "imagen": "logo-mercado-liebre"
-  },
-  {
-    "id": 27,
-    "nombre": "mario",
-    "email": "mp@hhhh.com",
-    "telefono": "987654321",
-    "password": "$2a$10$Z1R5Gb8ntdtN5hjWY1wCaenYm94BWGH3PeYs.oHHuIa8WolQQRK0m",
+    "telefono": "11111111",
+    "password": "$2a$10$va9HM/FSoVvoqmDp2Ds76OQnHbb6gHcrwdu35Mf.ORUnXF/4crQDe",
     "imagen": "logo-mercado-liebre"
   }
 ]

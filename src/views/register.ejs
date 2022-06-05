@@ -63,7 +63,12 @@
                 <div class="div-input">
                     <h3>Ingresa tu imagen</h3>
                     <label class="hidden " for="nickname"> <br></label>
-                    <input type="file" id="imagen" name="imgUsers" class="input-log" />
+                    <input 
+                        type="file" 
+                        id="imagen" 
+                        name="imgUsers" 
+                        class="input-log" <%= locals.errors && errors.imgUsers ? 'is-invalid' : null %>"
+                    >
                     <% if (locals.errors && errors.imgUsers) { %>
                         <div class="errors">
                             <%= errors.imgUsers.msg %>
