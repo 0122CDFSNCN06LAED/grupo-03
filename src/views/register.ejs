@@ -14,9 +14,9 @@
 
         </div>
 
-        <h1>
-            NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
-        </h1>
+        <div class="titulo-login">
+            <h1 class="nutrifarco">NutriFarco      <img class="img-logo" src="./img/favicon.ico"/></h1>  
+        </div>
 
     </header>
 
@@ -40,7 +40,7 @@
 
                 <div class="div-input">
                     <h3>Ingresa tu correo electronico</h3>
-                    <label class="hidden " for="nickname"><br></label>
+                    <label class="hidden" for="nickname"><br></label>
                     <input class="input-log" type="text" name="email" id="nickname" placeholder="e-mail" />
                     <% if (locals.errors && errors.email) { %>
                         <div class="errors">
@@ -51,7 +51,7 @@
 
                 <div class="div-input">
                     <h3>Ingresa tu numero de telefono</h3>
-                    <label class="hidden " for="nickname"> <br></label>
+                    <label class="hidden" for="nickname"> <br></label>
                     <input class="input-log" type="text" name="telefono" id="nickname" placeholder="Numero de telefono" />
                     <% if (locals.errors && errors.telefono) { %>
                         <div class="errors">

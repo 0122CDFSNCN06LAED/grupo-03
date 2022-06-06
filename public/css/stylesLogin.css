@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
@@ -35,22 +36,44 @@ i {
     color: rgb(155, 235, 140);
 }
 
-h1 {
-    color: #0C4207;
+.nutrifarco {
     text-align: center;
     padding: auto;
     margin-top: 70px;
+    text-align: center;
+    text-align: center;
+    font-size: 3em;
+    color: #5AB902;
+    font-family: "Poppins";
 }
 
-.img {
+.titulo-login{
+    text-align: center;
+}
+
+.img-logo {
+
+    display: inline-block;
     width: 30px;
 }
+
+.inicia-sesion{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #0C4207;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
 
 main {
     margin-bottom: 10px;
 }
 
 .div-input {
+
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
@@ -61,7 +84,6 @@ main {
     width: 100%;
     height: 40px;
     border-radius: 6px;
-    border: 1px solid coral;
     text-align: center;
     border-color: #0C4207;
     font-size: 20px;
@@ -69,6 +91,19 @@ main {
 
 .hidden {
     width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    
+    color: #0C4207;
+}
+
+.recordar{
+    font-size: 18px;
+    font-weight: bold;
+}
+.checkbox{
+    text-align: center;
 }
 
 .bottom-log-continuar {
@@ -83,50 +118,57 @@ main {
     background-color: #0C4207;
     color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .bottom-log-continuar:hover {
     background-color: #5AB902;
+    font-size: 21px;
 }
 
 .bottom-log-crear:hover {
     color: #5AB902;
+    font-size: 21px;
 }
 
 
 
 .bottom-log-crear {
-    width: 70%;
+    min-width: 15%;
     height: 40px;
-    border: none;
+    /*border: none;*/
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;
+    margin-right: auto;*/
     margin-top: 20px;
     margin-bottom: 20px;
     color: #0C4207;
     background-color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .div-bottom {
     text-align: center;
 }
 
+
+
 .need {
     color: #0C4207;
+    font-size: 17px;
     font-weight: 600;
     text-decoration: none;
 }
 
 .need:hover {
-    color: #5AB902
+    color: #5AB902;
+    font-size: 18px;
 }
 
 .need-container {
     margin-top: 70px;
+    text-align: center;
 }
 
 footer {
@@ -169,6 +211,13 @@ h3{
     }
 
     .bottom-log-continuar {
+        max-width: 240px;
+        margin-left: calc(50% - 150px);
+        margin-right: calc(50% - 150px);
+
+    }
+
+    .bottom-log-crear {
         max-width: 240px;
         margin-left: calc(50% - 150px);
         margin-right: calc(50% - 150px);
