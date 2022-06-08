@@ -4,13 +4,16 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcryptjs');
 const { use } = require('express/lib/router');
+const db = require("../database/models");
 const { Console } = require('console');
+
+
 
 const usersFilePath = path.join(__dirname, "../data/user-data.json");
 const userData = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 // Logearse
-const controllers={
+module.exports={
     login: function (req, res) {    
         return res.render('login');
     },
@@ -54,21 +57,22 @@ const controllers={
 	},
 
     // Listar usuarios
-    index: (req,res)=>{
-        
-        const userDataFile=fs.readFileSync(usersFilePath, "utf-8");
-        const userData=JSON.parse(userDataFile);
-          
+    /*index: (req,res)=>{  
         res.render("users-list", {
             userData,
         })
+    },*/
+    index: (req,res) => {  
+        db.User.findAll()
+        .then((users) => {
+            res.render("users-list", {
+                users:users
+            });
+        });
     },
 
     // Detalle de un usurio
     detail: (req,res)=>{        
-        const userDataFile=fs.readFileSync(usersFilePath, "utf-8");
-        const userData=JSON.parse(userDataFile);
-
         const id = req.params.id;
         const user = userData.find((p) => id == p.id);
           
@@ -100,13 +104,11 @@ const controllers={
     
         const resultValidation = validationResult(req);
 
-      
         const passEncriptada = bcrypt.hashSync('password', 10);
 
         let user = userData.find((p) => parseInt(id) == p.id);
     
-        Object.assign(user, {
-          
+        Object.assign(user, {        
             nombre:req.body.nombre,
             email:req.body.email,
             telefono:req.body.telefono,
@@ -125,8 +127,6 @@ const controllers={
             const jsonTxt = JSON.stringify(userData, null, 2);
             fs.writeFileSync(usersFilePath, jsonTxt, "utf-8");
 
- 
-    
         res.redirect("/");
     },
 
@@ -145,4 +145,3 @@ const controllers={
    
 }
 
-module.exports = controllers;
