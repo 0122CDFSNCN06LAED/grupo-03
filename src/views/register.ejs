@@ -3,6 +3,7 @@
 
 <head>
     <%- include("./partials/head") %>
+    
 </head>
 
 
@@ -26,7 +27,7 @@
         <div>
             
 
-            <form action="/user/processRegister" id="register" method="POST" enctype="single/form-data" >
+            <form action="/user/processRegister" id="register" method="POST" enctype="multipart/form-data" >
                 <div class="div-input">
                     <h3>Ingresa tu nombre y apellido</h3>
                     <label class="hidden " for="nickname"><br></label>
@@ -67,7 +68,7 @@
                         type="file" 
                         id="imagen" 
                         name="imgUsers" 
-                        class="input-log" <%= locals.errors && errors.imgUsers ? 'is-invalid' : null %>"
+                        class="input-log" <%= locals.errors && errors.imgUsers ? 'is-invalid' : null %>
                     >
                     <% if (locals.errors && errors.imgUsers) { %>
                         <div class="errors">
@@ -101,7 +102,7 @@
 
                 <div class="div-bottom">
                     <button class="bottom-log-continuar" onclick="comprobar()">Continuar <br></button>
-                    <a href="/"></a>
+                    <a href="/user/login"></a>
                 </div>
 
                     <p class="need-container"><a class="need" href="/help">

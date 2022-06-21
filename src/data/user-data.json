@@ -174,5 +174,45 @@
     "telefono": "123123123",
     "password": "$2a$10$kRuxMjqLm4aPSJmiEg.DUeOsRIonShHMQmIr87CzaQBQfZ2yjTJfO",
     "imagen": "logo-mercado-liebre"
+  },
+  {
+    "id": 29,
+    "nombre": "Pedro Roggiano",
+    "email": "pr@hhhh.com",
+    "telefono": "11111111",
+    "password": "$2a$10$Lx9wnElq9NNLnFhmpVEeuO4Tksleqx.iKPyueQnCTFh5GpOV7Pj2.",
+    "imagen": "logo-mercado-liebre"
+  },
+  {
+    "id": 30,
+    "nombre": "nestor",
+    "email": "nj@iiiiiiiiiiii.com",
+    "telefono": "12345",
+    "password": "$2a$10$VCTRlpjv.LPKaQedsQ2.i.PBszZK0.oGHxZwne0P6Czh7PY5DDSWa",
+    "imagen": "logo-mercado-liebre"
+  },
+  {
+    "id": 31,
+    "nombre": "pedro",
+    "email": "pr@hhhh.com",
+    "telefono": "11111111",
+    "password": "$2a$10$BSzyJq5UaYkrQfz4J7LWeuOKl31r3YEzb8Lc.1PCGV2rLNbdE93bu",
+    "imagen": "1654721737678Foto0297.jpg"
+  },
+  {
+    "id": 32,
+    "nombre": "mario",
+    "email": "mc@cccccccc.com",
+    "telefono": "111111111111",
+    "password": "$2a$10$a9.K16SfrfnOvkBmELxxWuIP1Z2QO4SZc20L.vMrigwcrOtOMC.5m",
+    "imagen": "1654723949597Foto0282.jpg"
+  },
+  {
+    "id": 33,
+    "nombre": "Joaquin Velez",
+    "email": "jv@bbbbbbb.com",
+    "telefono": "1548785963",
+    "password": "$2a$10$yqPtSLtibRmTymArlSNgn.YdybJkduCQmz3LIWmeK.N8qIoXePi5W",
+    "imagen": "1654957586515005.JPG"
   }
 ]

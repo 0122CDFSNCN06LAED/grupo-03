@@ -3,6 +3,7 @@
 
 <head>
     <%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/stylesLogin.css">
 </head>
 
 
@@ -25,36 +26,50 @@
     <main>
         <h1 class="inicia-sesion">Iniciar sesión</h1>
 
-      
-            <form method="post" action="/user/login">
+            <form action="/user/processLogin" id="processLogin" method="POST" >      
                 <div class="div-input">
                     <h3>Correo Electrónico</h3>
-                    <label class="hidden" for="nickname"><br></label>
-                    <input class="input-log" type="text" name="email" id="email" placeholder="correo@email.com"/>
-                    </div>
+                    <label class="hidden" for="email"><br></label>
+                    <input class="input-log" type="email" name="email" id="email" placeholder="correo@email.com"/>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errors">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+                </div>
 
                 <div class="div-input">
                     <h3>Contraseña</h3>
                     <label class="hidden" for="password"><br></label>
                     <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña"/>
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="errors">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
                 </div>
 
                 <div class="checkbox">
                     <label for="recordame" class="recordar">Recuérdame</label>
                     <input type="checkbox"  id="recordar" name="recordar">
-                </div>
+                </div>                      
             
-
+               
                 <div class="div-bottom">             
                     <button class="bottom-log-continuar" type="submit">Iniciar sesión</button>
-                    <a href="/register" class="bottom-log-crear">Crear cuenta</a>              
+                   
+                    <a href="/user/register" class="bottom-log-continuar">Crear cuenta</a>                                 
+                </div>> 
+                                  
                     
                 </div> 
-                    <p class="need-container"><a class="need" href="/help">
-                        Necesito ayuda para ingresar </a>
-                    </p>
-                
-            </form>
+                    
+                <p class="need-container"><a class="need" href="/help">
+                     Necesito ayuda para ingresar </a>
+                </p>
+            </form>  
+         
+           
     </main>
 
     <footer>

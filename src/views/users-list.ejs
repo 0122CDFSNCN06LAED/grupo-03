@@ -48,12 +48,12 @@
                 
               <div >
                 <nav class="main-nav" id="main-nav"></nav>
-                  <% userData.forEach(user => { %>
+                  <% resuList.forEach(user => { %>
                   <ul class="menu-list">
-                    <li class="list_index1"><a href="/user/detalle/<%= user.id %>" class=""><p></p> <%= user.id %> </p></a></li>
+                    <li class="list_index1"><a href="/user/detalle/<%= user.id %>" class=""><p><%= user.id %> </p></a></li>
                     <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.nombre %> </p></a></li>
                     <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.email %> </p></a></li>
-                    <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.telefono %> </p></a></li>
+                    <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.telefono %> </p></a></li>   
                     <img class="list_index5"
                       src="/img/imgUser/<%= user.image %>"                  
                       /> 

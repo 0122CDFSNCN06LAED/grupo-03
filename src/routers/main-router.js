@@ -7,8 +7,8 @@ const mainController = require("../controllers/main-controller");
 
 //rutas main
 mainRouter.get("/", mainController.home);				
-mainRouter.get("/login", mainController.login);
-mainRouter.get("/register", mainController.register);
+//mainRouter.get("/login", mainController.login);
+//mainRouter.get("/register", mainController.register);
 mainRouter.get("/carrito", mainController.carrito);
 
 

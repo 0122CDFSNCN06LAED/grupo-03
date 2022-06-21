@@ -6,6 +6,7 @@ module.exports = (sequelize, dataTypes) => {
                 primaryKey: true,
                 allowNull: false,
                 autoIncrement: true
+
         },
         nombre: {
             type: dataTypes.STRING(100),
@@ -13,7 +14,8 @@ module.exports = (sequelize, dataTypes) => {
         },
         email: {
             type: dataTypes.STRING(100),
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         telefono: {
             type: dataTypes.STRING(100),

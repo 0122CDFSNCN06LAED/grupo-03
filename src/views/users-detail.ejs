@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang=”en”>
+  <head>
+      <%- include("./partials/head") %>
+  </head>
 
-<head>
-    <%- include("./partials/head") %>
-</head>
-
-
-<body class="body">
-
+  <body class="body">
     <header>
-        <div class="header-div">
-            <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
-
-        </div>
-
+      <div class="header-div">
+        <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+      </div>
         <h1>
             NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
         </h1>
+      </header>
 
-    </header>
 
-
-  <main>
-
-    <div>
+    <main>
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <h2 class="product">Detalle del Usuario <%= resuDetail.id %> </h2>
+          </div>
+        </div>       
+                  
+        <div >            
+          <p class="list_index1"> Id: <%= resuDetail.id %> </p>
+          <p class="list_index2"> Nombre: <%= resuDetail.nombre %> </p>
+          <p class="list_index2"> Emil: <%= resuDetail.email %> </p>
+          <p class="list_index2"> Telefono: <%= resuDetail.telefono %> </p>         
+          <img class="list_index6"  src="/img/imgUser/<%= resuDetail.imagen %>">
+          <input 
+            type="file" 
+            name="imagen"
             
-
-      <div class="row">
-        <div class="col-12">
-          <h2 class="product">Detalle del Usuario <%= user.id %> </h2>
+          >                                               
         </div>
-      </div>         
-                
-      <div >             
-        <p class="list_index1"> Id: <%= user.id %> </p>
-        <p class="list_index2"> Nombre: <%= user.nombre %> </p>
-        <p class="list_index2"> Emil: <%= user.email %> </p>
-        <p class="list_index2"> Telefono: <%= user.telefono %> </p>
-        <img class="list_index6" 
-          src="/img/imgUser/<%= user.image %>" />                                                  
+
+        <div class="div-bottom container" >
+          <a href="/user/update/<%= resuDetail.id %>"><button class="bottom-log-continuar" type="submit">Ir a modificar  </button>">
+          <a href="/user/edit/<%= resuDetail.id %>"><button class="bottom-log-continuar" type="submit">Ir a borrar </button>">
+          <a href="/"><button class="bottom-log-continuar" type="submit">Volver a pagina principal </button>           
+          </a>       
+        </div> 
+        
+       
       </div>
-                      
-      <div class="div-bottom">
-        <a href="/user/update/<%= user.id %>"><button class="bottom-log-continuar" type="submit">Ir a modificar y/o borrar </button>">
-        <a href="/"><button class="bottom-log-continuar" type="submit">Volver a pagina principal </button>           
-        </a>       
-      </div>          
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <%- include("./partials/footer-log-reg") %>
-  </footer>
-</body>
-
+    <footer>
+      <%- include("./partials/footer-log-reg") %>
+    </footer>
+  </body>
 </html>
