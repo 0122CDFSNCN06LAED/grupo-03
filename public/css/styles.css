@@ -87,7 +87,13 @@ img {
   color: #454546;
   border: 1px solid #454546;
   text-decoration: none;
-
+}
+.main-header__hola{
+  margin: 0px 0px 10px;
+  padding: 0px 0px ;
+  color:#151515;
+  border: 1px solid #454546;
+  text-decoration: none;
 }
 .main-header__input{
   display: block;

@@ -27,9 +27,9 @@ module.exports = {
                 delete resuLogin.password;
 				req.session.userLogueado = resuLogin;
 
-            /*if(req.body.recordar) {
+            if(req.body.recordar) {
 				res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30)})
-			}*/
+			}
                 
                 return res.redirect('/');
             }
@@ -92,7 +92,7 @@ module.exports = {
             email: req.body.email,
             telefono: req.body.telefono,
             password: passEncriptada,
-            imagen: req.file ? req.file.filename : "1655319778365logo-mercado-liebre",
+            imagen: req.file ? req.file.filename : "1656334799808img-banner-02.jpg"
         };
         //userData.push(user); 
         //const jsonTxt = JSON.stringify(userData, null, 2)
@@ -160,11 +160,16 @@ module.exports = {
             email: req.body.email,
             telefono: req.body.telefono,
             password: passEncriptada,
-            imagen: req.file ? req.file.filename : "1655319778365logo-mercado-liebre",
+            imagen: req.file ? req.file.filename :  "1656334799808img-banner-02.jpg",
         },
             { where: { id: updateId } }
         ),
             res.redirect("/");
-    }
+    },
+    logout: (req, res) => {
+		//res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 }
 

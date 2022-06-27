@@ -39,4 +39,5 @@ userRouter.delete("/:id", userController.remove);//borrar
 userRouter.get("/update/:id", userController.modificar);//modificar
 userRouter.put("/:id", uploadFile.single('imgUsers'),userController.update);//modificar
 
+userRouter.get("/logout", userController.logout);//modificar
 module.exports = userRouter;

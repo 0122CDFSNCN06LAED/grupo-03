@@ -38,7 +38,7 @@ app.set("views", path.join(__dirname, "src/views"));
 
 
 //app.use(logger('dev'));
-app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(methodOverride("_method")); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
 
 app.use("/product",productRouter);
 app.use("/user",userRouter);
