@@ -33,7 +33,7 @@ i {
 }
 
 .arrow {
-    color: rgb(155, 235, 140);
+    color: rgb(255, 255, 255);
 }
 
 .nutrifarco {
@@ -60,7 +60,7 @@ i {
 .inicia-sesion{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    color: #0C4207;
+    color: #157B09;
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -85,9 +85,15 @@ main {
     height: 40px;
     border-radius: 6px;
     text-align: center;
-    border-color: #0C4207;
+    border: none;
+    border-bottom: 2px solid #5AB902;
     font-size: 20px;
 }
+
+.input-log:focus {
+    outline: none;
+}
+
 
 .hidden {
     width: 100%;
@@ -115,15 +121,15 @@ main {
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #0C4207;
+    background-color: #157B09;
     color: white;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .bottom-log-continuar:hover {
     background-color: #5AB902;
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .bottom-log-crear:hover {
@@ -142,7 +148,7 @@ main {
     margin-right: auto;*/
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #0C4207;
+    color: #157B09;
     background-color: white;
     font-weight: 600;
     font-size: 20px;
@@ -173,7 +179,7 @@ main {
 
 footer {
     padding: 20px;
-    border-top: 2px solid rgb(155, 235, 140);
+    border-top: 2px solid rgb(209, 209, 209);
     color: black;
     font-size: 12px;
     text-align: center;
@@ -192,7 +198,7 @@ footer {
 }
 
 h3{
-    color: #0C4207;
+    color: rgba(0,0,0,.9);
     text-align: center;
     padding: auto;
 }

@@ -46,7 +46,7 @@ img {
   position: absolute;
   top: 180px;
   left: 0;
-  background: #212121;
+  background: #5AB902;
   width: 100%;
   list-style: none;
   padding: 0px;
@@ -65,7 +65,7 @@ img {
 }
 .menu__link:hover {
   background: white;
-  color: #212121;
+  color: #5AB902;
 }
 
 .mostrar{
@@ -75,30 +75,40 @@ img {
 
 .icon-menu{
   font-size: 1.5em;
-  border: 1px solid #454546; 
+  color: #5AB902;
+  border: 1px solid #5AB902; 
   display: block;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 10px 100px / 120px;
   margin-left: auto;
 }
+.icon-menu:hover{
+  color: white;
+  background-color: #5AB902;
+  transition: all 0.5s;
+}
+
 .main-header__btn{
   display: block;
   padding: 10px 30px;
-  color: #454546;
-  border: 1px solid #454546;
+  color: #5AB902;
+  border: 1px solid #5AB902;
+  border-radius: 10px 100px / 120px;
   text-decoration: none;
 }
-.main-header__hola{
-  margin: 0px 0px 10px;
-  padding: 0px 0px ;
-  color:#151515;
-  border: 1px solid #454546;
-  text-decoration: none;
+.main-header__btn:hover{
+background-color: #5AB902;
+color: white;
+border: 1 px solid #5AB902;
+transition: all 0.5s;
 }
 .main-header__input{
   display: block;
   padding: 10px;
   width: 50%;
+  border-radius: 10px 100px / 120px;
+  border-color: #5AB902;
 
 }
 
