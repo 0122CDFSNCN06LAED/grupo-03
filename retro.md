@@ -1,3 +1,4 @@
+=====================================================================================
 
 # SPRINT 2
 
@@ -33,8 +34,11 @@ En Stop Doing:
 
 Link al tablero: https://app.mural.co/invitation/mural/biofisica5105/1649022513276?sender=uf2c8a31901b11cba53510030&key=51d9b4ad-ba9f-430f-9a20-5a772dae20db.
 
-Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
 
+=======================================================================================
 
 # SPRINT 3
 
@@ -46,17 +50,99 @@ Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador
 -   Homogenizar estilos entre las páginas
 
 
-Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador
-
-
-
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
+=========================================================================================
 
 # SPRINT 4
 
+## Avances
+- Se implementó carrito de campras pendiente del SPRINT 3
+- Se mejoraron estilos de las páginas
+- Se terminó de implementar el motor de vistas .EJS 
+- Se modificaron los métodos de los controladores para que utilicen el método render()
+- Se creó la carpeta partials con sus respectivas vistas
+
+## Pendientes
+- Formulario para cargar nuevos productos y editar los existentes.
+
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
+===============================================================================================
+
 # SPRINT 5
+
+## Avances
+- Se definieron los campos para usuarios y generar archivo JSON
+- Se crea el archivo user-data.json
+- Se implementa el CRUD para usuarios
+- Se implementa entidad de usuarios se entrega estructura de archivos y directorios de usuarios.
+- Se implementa registro de usuarios se entrega formulario funcional de creación de usuarios.
+- Se implementa login de usuarios se entrega formulario funcional de login.
+- Se Implementar la función de recordar al usuario
+
+## Pendientes
+- Formulario para cargar nuevos productos y editar los existentes.
+- Definir los campos necesarios para los productos y generar archivo JSON
+- Como paso previo a tener una base de datos relacional, con las siguientes propiedades
+    ● Identificador : id
+    ● Nombre del producto: name
+    ● Descripción: description
+    ● Imagen: image
+    ● Categoría: category
+    ● Colores (o cualquier otro campo similar como: talle): colors
+    ● Precio: price
+- CRUD para productos
+- Implementar rutas de huéspedes y de usuarios
+
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
+=====================================================================================
 
 # SPRINT 6
 
+## Avances
+- Se implementaron los middelwares
+    user-logMidVista.js
+    user-logueado.js
+    user-regValidation.js
+- Se implementó función ‘Recordar usuario’
+
+## Pendientes
+- Diagrama de base de datos. Entregar diagrama de entidad-relación de su base de datos en formato PDF.
+- Script de estructura. Entregar archivo structure.sql que permita crear la base de datos completa.
+- (Opcional) Script de datos. Entregar archivo con extensión data.sql que permita poblar la base con datos.
+- Creación de carpeta Sequelize y archivos de modelos. Entregar carpeta database que incluya los archivos de configuración y archivos de modelos junto con sus relaciones.
+- CRUD. Entregar rutas, controladores y vistas necesarias para que suceda lo detallado previamente utilizando Sequelize para trabajar con la base de datos.
+
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
+
+=============================================================================================
+
 # SPRINT 7
 
+## Avances
+- Se implementó  Express Validator
+
+## Pendientes
+- Validaciones del front-end entregar implementación de validator.js (documentación/descarga) o 
+- Validaciones "custom" en los formularios mencionados.
+
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
+
+================================================================================================
+
 # SPRINT 8
+
+================================================================================================
+
+
+
+
