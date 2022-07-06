@@ -11,12 +11,12 @@
 
     <header>
         <div class="header-div">
-            <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+            <p class="back-arrow"><a class="arrow" href="/"><i class="fa-solid fa-arrow-left-long"></i> </a></p>
 
         </div>
 
         <div class="titulo-login">
-            <h1 class="nutrifarco">NutriFarco      <img class="img-logo" src="./img/favicon.ico"/></h1>  
+            <h1 class="nutrifarco">Crear Cuenta      <img class="img-logo" src="/img/nutri-logo.png"/></h1>  
         </div>
 
     </header>
@@ -29,7 +29,7 @@
 
             <form action="/user/processRegister" id="register" method="POST" enctype="multipart/form-data" >
                 <div class="div-input">
-                    <h3>Ingresa tu nombre y apellido</h3>
+                    <h3>Nombre y apellido</h3>
                     <label class="hidden " for="nickname"><br></label>
                     <input class="input-log" type="text" name="nombre" id="nickname" placeholder="Nombre y Apellido" />
                     <% if (locals.errors && errors.nombre) { %>
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="div-input">
-                    <h3>Ingresa tu correo electronico</h3>
+                    <h3>Correo eléctronico</h3>
                     <label class="hidden" for="nickname"><br></label>
                     <input class="input-log" type="text" name="email" id="nickname" placeholder="e-mail" />
                     <% if (locals.errors && errors.email) { %>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="div-input">
-                    <h3>Ingresa tu numero de telefono</h3>
+                    <h3>Número de telefono</h3>
                     <label class="hidden" for="nickname"> <br></label>
                     <input class="input-log" type="text" name="telefono" id="nickname" placeholder="Numero de telefono" />
                     <% if (locals.errors && errors.telefono) { %>
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="div-input">
-                    <h3>Ingresa tu imagen</h3>
+                    <h3>Foto de perfil</h3>
                     <label class="hidden " for="nickname"> <br></label>
                     <input 
                         type="file" 
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="div-input">
-                    <h3>Ingresa tu contraseña</h3>
+                    <h3>Contraseña</h3>
                     <label class="hidden" for="password"><br></label>
                     <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña" />
                     <% if (locals.errors && errors.password) { %>
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="div-input">
-                    <h3>Confirma tu contraseña</h3>
+                    <h3>Confirmar contraseña</h3>
                     <label class="hidden" for="passwordConf"><br></label>
                     <input class="input-log" type="password" name="passwordConf" id="passwordConf" placeholder="Confirmar contraseña" />
                     <% if (locals.errors && errors.password1) { %>
