@@ -26,7 +26,6 @@ app.use(session({
 }));
 
 app.use(cookies());
-
 app.use(userLogMidVista);
 
 app.use(express.urlencoded({extended: false}))

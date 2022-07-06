@@ -1,34 +1,47 @@
 <div class="container container--flex">
-    <div class="main-header__container">
-      <h1 class="main-header__title">NutriFarco</h1>
-      <span class="icon-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
-      <nav class="main-nav" id="main-nav">
-        <ul class="menu">
-          <li class="menu__item"><a href="" class="menu__link">INICIO</a></li>
-          <li class="menu__item"><a href="" class="menu__link">ACERCA</a></li>
-          <li class="menu__item"><a href="" class="menu__link">FAQ</a></li>
-          <li class="menu__item"><a href="" class="menu__link">EXPLORÁ</a></li>
-          <% if(locals.userLogueado){ %>
-          <li class="menu__item"><a href="/user/listar" class="menu__link">CONTACTO</a></li>
-          <% } %>
-        </ul>
-      </nav>
-    </div>
-    <div class="main-header__container">
-      <span class="main-header__txt">¿Necesitás ayuda?</span>
-      <p class="main-header__txt"><i class="fa-solid fa-phone-flip"></i> Llama al 11-5145-5422</p>
-    </div>
-    <div class="main-header__container"> 
-      <a href="/carrito" class="main-header__btn">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
-      <% if(locals.userLogueado){ %>
-        <span class="main-header__hola">Hola <%= locals.userLogged.nombre %></span>
-        <ul>
-          <li><a href="/user/logout">Logout</a></li>
-          <li> <a href="/user/listar">Listar</a></li>
-        </ul>           
-      <% } else { %>
-        <a href="/user/login" class="main-header__link"><i class="fas fa-user"></i></a>
-      <% } %>
-      <input type="search" class="main-header__input" placeholder="Buscar productos"><i class="fas fa-search"></i>    
-      </div>
+  <div class="main-header__container">
+    <h1 class="main-header__title">NutriFarco</h1>
+    <span class="icon-menu" id="btn-menu"
+      ><i class="fa-solid fa-bars"></i
+    ></span>
+    <nav class="main-nav" id="main-nav">
+      <ul class="menu">
+        <li class="menu__item"><a href="" class="menu__link">INICIO</a></li>
+        <li class="menu__item"><a href="" class="menu__link">ACERCA</a></li>
+        <li class="menu__item"><a href="" class="menu__link">FAQ</a></li>
+        <li class="menu__item"><a href="" class="menu__link">EXPLORÁ</a></li>
+        <% if(locals.userLogueado){ %>
+        <li class="menu__item">
+          <a href="/user/home" class="menu__link">CONTACTO</a>
+        </li>
+        <% } %>
+      </ul>
+    </nav>
   </div>
+  <div class="main-header__container">
+    <span class="main-header__txt">¿Necesitás ayuda?</span>
+    <p class="main-header__txt">
+      <i class="fa-solid fa-phone-flip"></i> Llama al 11-5145-5422
+    </p>
+  </div>
+  <div class="main-header__container">
+    <a href="/carrito" class="main-header__btn"
+      >Carrito <i class="fa-solid fa-cart-shopping"></i
+    ></a>
+    <% if(locals.userLogueado){ %>
+    <span class="main-header__hola">Hola <%= locals.userLogueado.nombre %></span>
+    <ul>
+      <li><a href="/user/logout">Logout</a></li>
+    </ul>
+    <% } else { %>
+    <a href="/user/login" class="main-header__link"
+      ><i class="fas fa-user"></i
+    ></a>
+    <% } %>
+    <input
+      type="search"
+      class="main-header__input"
+      placeholder="Buscar productos"
+    /><i class="fas fa-search"></i>
+  </div>
+</div>

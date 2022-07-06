@@ -10,7 +10,7 @@ const { Console } = require('console');
 const usersFilePath = path.join(__dirname, "../data/user-data.json");
 const userData = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-// Logearse
+// Loguearse
 module.exports = {
     login: function (req, res) {
         return res.render('login');
@@ -20,17 +20,15 @@ module.exports = {
             where: { email: req.body.email }
         })
 
-
         if (resuLogin) {
-            let passwordOK=bcrypt.compareSync(req.body.password, resuLogin.password);
-            if(passwordOK){
+            let passwordOK = bcrypt.compareSync(req.body.password, resuLogin.password);
+            if (passwordOK) {
                 delete resuLogin.password;
-				req.session.userLogueado = resuLogin;
+                req.session.userLogueado = resuLogin;
 
-            if(req.body.recordar) {
-				res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30)})
-			}
-                
+                if (req.body.recordar) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30) })
+                }
                 return res.redirect('/');
             }
             return res.render('login', {
@@ -49,7 +47,7 @@ module.exports = {
             },
         });
 
-       
+
     },
     //Registro de nuevos usuario
     register: (req, res) => {
@@ -57,7 +55,7 @@ module.exports = {
     },
     processRegister: async (req, res) => {
         const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
+        if (!resultValidation.isEmpty()) {
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
@@ -80,9 +78,9 @@ module.exports = {
 
         let passEncriptada = bcrypt.hashSync(req.body.password, 10);
 
-        const lastIndex = userData.length - 1;
-        const lastUser = userData[lastIndex];
-        const biggestId = lastUser ? lastUser.id : 0;
+        //const lastIndex = userData.length - 1;
+        //const lastUser = userData[lastIndex];
+        //const biggestId = lastUser ? lastUser.id : 0;
         //const newId = (biggestId + 1);
 
         const user = {
@@ -92,12 +90,13 @@ module.exports = {
             email: req.body.email,
             telefono: req.body.telefono,
             password: passEncriptada,
-            imagen: req.file ? req.file.filename : "1656334799808img-banner-02.jpg"
+            imagen: req.file ? req.file.filename : "1656790940073img-banner-02.jpg",
+            categoria: 2,
         };
         //userData.push(user); 
         //const jsonTxt = JSON.stringify(userData, null, 2)
         //fs.writeFileSync(usersFilePath, jsonTxt, "utf-8");
-       
+
         await db.User.create(user)
 
         res.redirect("/user/login");
@@ -111,7 +110,7 @@ module.exports = {
         });
     },
 
-    // Detalle de un usurio
+    // Detalle de un usuario para Adminitradores
     detail: async (req, res) => {
         const detId = req.params.id;
         const resuDetail = await db.User.findByPk(detId);
@@ -132,7 +131,7 @@ module.exports = {
     remove: async (req, res) => {
         const delId = req.params.id;
         const resuDelete = await db.User.destroy({ where: { id: delId }, force: true })
-        res.redirect("/");
+        res.redirect("/user/logout");
     },
 
     // Elige un registro para modificar
@@ -142,11 +141,10 @@ module.exports = {
         res.render("users-update", {
             resuModificar,
         })
-        //Modifica un registro
     },
+    //Modifica un registro
     update: async (req, res) => {
         const resultValidation = validationResult(req);
-
         if (resultValidation.errors.length > 0) {
             return res.render('users-update', {
                 errors: resultValidation.mapped(),
@@ -154,22 +152,37 @@ module.exports = {
             });
         }
         const updateId = req.params.id;
-        const passEncriptada = bcrypt.hashSync(req.body.password, 10);
+        let passEncriptada = bcrypt.hashSync(req.body.password, 10);
         await db.User.update({
             nombre: req.body.nombre,
             email: req.body.email,
             telefono: req.body.telefono,
             password: passEncriptada,
-            imagen: req.file ? req.file.filename :  "1656334799808img-banner-02.jpg",
+            imagen: req.file ? req.file.filename : "1656790940073img-banner-02.jpg",
         },
             { where: { id: updateId } }
         ),
             res.redirect("/");
     },
+
+    //Elimina la session y las cookies
     logout: (req, res) => {
-		//res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-	}
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    },
+
+    //Discrimina administrador de usuario
+    home: (req, res) => {
+        const auth = req.session.userLogueado;
+        if (auth) {
+            console.log(auth);
+            if (auth.categoria === 1) {
+                res.redirect("/user/listar/")
+            } else {
+                res.redirect("/user/detalle/" + auth.id)
+            }
+        }
+    }
 }
 

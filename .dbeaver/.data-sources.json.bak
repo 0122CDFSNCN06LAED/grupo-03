@@ -1,0 +1,68 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-180b53d15ef-52d2ef3fc9322b23": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "localhost",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mysql://localhost:3306/",
+				"home": "mysql_client",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mysql8-180b53d15ef-52d2ef3fc9322b23": {
+			"musimundos": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202205171701\"><entities><data-source id=\"mysql8-180b53d15ef-52d2ef3fc9322b23\"><entity id=\"1\" name=\"albumes\" fq-name=\"musimundos.albumes\" order=\"0\" x=\"996\" y=\"20\"><path name=\"musimundos\"/></entity><entity id=\"2\" name=\"artistas\" fq-name=\"musimundos.artistas\" order=\"1\" x=\"20\" y=\"29\"><path name=\"musimundos\"/></entity><entity id=\"3\" name=\"canciones\" fq-name=\"musimundos.canciones\" order=\"2\" x=\"183\" y=\"190\"><path name=\"musimundos\"/></entity><entity id=\"4\" name=\"canciones_de_playlists\" fq-name=\"musimundos.canciones_de_playlists\" order=\"3\" x=\"183\" y=\"29\"><path name=\"musimundos\"/></entity><entity id=\"5\" name=\"clientes\" fq-name=\"musimundos.clientes\" order=\"4\" x=\"628\" y=\"152\"><path name=\"musimundos\"/></entity><entity id=\"6\" name=\"empleados\" fq-name=\"musimundos.empleados\" order=\"5\" x=\"803\" y=\"133\"><path name=\"musimundos\"/></entity><entity id=\"7\" name=\"facturas\" fq-name=\"musimundos.facturas\" order=\"6\" x=\"370\" y=\"190\"><path name=\"musimundos\"/></entity><entity id=\"8\" name=\"generos\" fq-name=\"musimundos.generos\" order=\"7\" x=\"370\" y=\"29\"><path name=\"musimundos\"/></entity><entity id=\"9\" name=\"items_de_facturas\" fq-name=\"musimundos.items_de_facturas\" order=\"8\" x=\"20\" y=\"228\"><path name=\"musimundos\"/></entity><entity id=\"10\" name=\"playlists\" fq-name=\"musimundos.playlists\" order=\"9\" x=\"628\" y=\"29\"><path name=\"musimundos\"/></entity><entity id=\"11\" name=\"tipos_de_medio\" fq-name=\"musimundos.tipos_de_medio\" order=\"10\" x=\"803\" y=\"29\"><path name=\"musimundos\"/></entity></data-source></entities><relations/></diagram>"
+					}
+				},
+				":albumes": {
+					"constraints": {
+						"albumes_VK": {
+							"type": "vpk",
+							"attributes": [
+								"id_artista"
+							]
+						}
+					}
+				},
+				":artistas": {
+					"foreign-keys": [
+						{
+							"entity": "database://mysql8-180b53d15ef-52d2ef3fc9322b23/org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog/musimundos/org.jkiss.dbeaver.ext.mysql.model.MySQLTable/albumes",
+							"constraint": "albumes_VK",
+							"attributes": {
+								"id": "id_artista"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
