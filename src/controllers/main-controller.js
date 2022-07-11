@@ -9,4 +9,8 @@ module.exports = {
     carrito: function (req, res) {   
         res.render("carrito");
     },
+    
+    productDetail: function (req, res) {   
+        res.render("productDetail");
+    },
 };

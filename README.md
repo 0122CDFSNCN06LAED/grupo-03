@@ -106,11 +106,6 @@
 > en Digital House. Tengo una agencia de Marketing Digital, trabajo con
 > museos y tengo una cuenta de TikTok. Me gusta la música.
 > 
-> - Carlos Gordillo Olivera: ***[carlosng95](https://github.com/carlosng95)***
-> > Soy Licenciatura en Física y Master en Física Médica en el
-> Instituto Balseiro. 26 años. Docente en FI-UNSJ. Actualmente Data
-> Scientist con especial interés en Deep Learning. Músico, pianista.
-> 
 > - Mario Pelavski: ***[mario-pelavski](https://github.com/Mario-Pelavski)***
 > > Soy Mario Pelavski, Contador Público UBA, trabajé en multinacionales
 > de primer orden en puestos de relevancia.
