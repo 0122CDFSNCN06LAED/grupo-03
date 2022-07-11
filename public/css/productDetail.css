@@ -116,7 +116,7 @@ img{
 .product-detail ul li{
     margin: 0;
     list-style: none;
-    background: url(product_images/checked.png) left center no-repeat;
+    background: url(/Img/checked.png) left center no-repeat;
     background-size: 18px;
     padding-left: 1.7rem;
     margin: 0.4rem 0;
