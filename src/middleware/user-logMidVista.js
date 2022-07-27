@@ -1,5 +1,5 @@
 const userLogueado = require("./user-logueado");
-const db = require("../database/models");
+const db = require("./../database/models/index");
 
 async function userLogMidVista(req, res, next) {
     res.locals.userLogueado = false;

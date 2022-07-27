@@ -31,4 +31,5 @@ userRouter.put("/:id", uploadFile.single('imgUsers'),
 
 userRouter.get("/logout", userController.logout);//cierra session y cookie
 
+
 module.exports = userRouter;

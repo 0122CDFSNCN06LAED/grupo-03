@@ -9,10 +9,12 @@
         <li class="menu__item"><a href="" class="menu__link">INICIO</a></li>
         <li class="menu__item"><a href="" class="menu__link">ACERCA</a></li>
         <li class="menu__item"><a href="" class="menu__link">FAQ</a></li>
-        <li class="menu__item"><a href="" class="menu__link">EXPLORÁ</a></li>
+        
         <% if(locals.userLogueado){ %>
-        <li class="menu__item">
-          <a href="/user/home" class="menu__link">CONTACTO</a>
+          <li class="menu__item">
+            <a href="/user/home" class="menu__link">PRODUCTOS</a></li>
+          <li class="menu__item">
+          <a href="/user/home" class="menu__link">CLIENTES</a>
         </li>
         <% } %>
       </ul>
@@ -35,6 +37,9 @@
     </ul>
     <% } else { %>
     <a href="/user/login" class="main-header__link"
+      ><i class="fas fa-user"></i
+    ></a>
+    <a href="/product/create" class="main-header__link"
       ><i class="fas fa-user"></i
     ></a>
     <% } %>
