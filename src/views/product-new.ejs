@@ -16,7 +16,7 @@
         </div>
 
         <div class="titulo-nuevos productos">
-            <h1 class="nutrifarco">Crear Cuenta      <img class="img-logo" src="/img/nutri-logo.png"/></h1>  
+            <h1 class="nutrifarco">Crear Producto      <img class="img-logo" src="/img/nutri-logo.png"/></h1>  
         </div>
 
     </header>
@@ -27,14 +27,14 @@
         <div>
             
 
-            <form action="/product/newProduct" id="register" method="POST" enctype="multipart/form-data" >
+            <form action="/product/newProduct" id="newProduct" method="POST" enctype="multipart/form-data" >
                 <div class="div-input">
                     <h3>Nombre</h3>
                     <label class="hidden " for="nickname"><br></label>
-                    <input class="input-log" type="text" name="nombre" id="nickname" placeholder="Nombre y Apellido" />
-                    <% if (locals.errors && errors.nombre) { %>
+                    <input class="input-log" type="text" name="name" id="nickname" placeholder="Nombre" />
+                    <% if (locals.errors && errors.name) { %>
                         <div class="errors">
-                            <%= errors.nombre.msg %> 
+                            <%= errors.name.msg %> 
                         </div>
                     <% } %>
                 </div>
@@ -42,10 +42,21 @@
                 <div class="div-input">
                     <h3>Precio</h3>
                     <label class="hidden" for="nickname"><br></label>
-                    <input class="input-log" type="number" name="precio" id="nickname" placeholder="e-mail" />
-                    <% if (locals.errors && errors.Precio) { %>
+                    <input class="input-log" type="number" name="price" id="nickname" placeholder="$" />
+                    <% if (locals.errors && errors.price) { %>
                         <div class="errors">
-                            <%= errors.precio.msg %>
+                            <%= errors.price.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Contenido</h3>
+                    <label class="hidden" for="nickname"> <br></label>
+                    <input class="input-log" type="number" name="weight" id="nickname" placeholder="Contenido" />
+                    <% if (locals.errors && errors.weight) { %>
+                        <div class="errors">
+                            <%= errors.weight.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -53,21 +64,32 @@
                 <div class="div-input">
                     <h3>Descripcion</h3>
                     <label class="hidden" for="nickname"> <br></label>
-                    <input class="input-log" type="text" name="descripcion" id="nickname" placeholder="Numero de telefono" />
-                    <% if (locals.errors && errors.descripcion) { %>
+                    <input class="input-log" type="text" name="description" id="nickname" placeholder="Descripcion" />
+                    <% if (locals.errors && errors.description) { %>
                         <div class="errors">
-                            <%= errors.descripcion.msg %>
+                            <%= errors.description.msg %>
                         </div>
                     <% } %>
                 </div>
 
                 <div class="div-input">
                     <h3>Categoria</h3>
-                    <label class="hidden" for="password"><br></label>
-                    <input class="input-log" type="password" name="categoria" id="password" placeholder="Contraseña" />
-                    <% if (locals.errors && errors.categoria) { %>
+                    <label class="hidden" for="nickname"><br></label>
+                    <input class="input-log" type="textd" name="category" id="nickname" placeholder="Id de Categoria" />
+                    <% if (locals.errors && errors.category) { %>
                         <div class="errors">
-                            <%= errors.password.msg %>
+                            <%= errors.category.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Stock</h3>
+                    <label class="hidden" for="nickname"><br></label>
+                    <input class="input-log" type="number" name="stock" id="nickname" placeholder="Stock" />
+                    <% if (locals.errors && errors.stock) { %>
+                        <div class="errors">
+                            <%= errors.stock.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -88,17 +110,18 @@
                     <% } %>
                 </div>
                
-            </form>
+           
 
                 <div class="div-bottom">
-                    <button class="bottom-log-continuar" type="submit"></button>
-                    <a href="/"></a>
+                    <button class="bottom-log-continuar" type="submit">Agregar</button>
+                    <a href="/product/newProduct"></a>
                 </div>
 
                     <p class="need-container"><a class="need" href="/help">
                                 Necesito ayuda para ingresar </a>
                     </p>
                 </div>
+            </form>
             
         </div>
     </main>

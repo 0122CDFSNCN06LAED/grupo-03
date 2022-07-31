@@ -16,14 +16,14 @@
 
         <main>
             <div> 
-                <form action="/product/<%= resuModificar.id %>?_method=PUT" id="userUpdate" method="POST" enctype="multipart/form-data" >                    
+                <form action="/product/<%= resuModificar.id %>?_method=PUT" id="productUpdate" method="POST" enctype="multipart/form-data" >                    
                     <div class="div-input">
                         <h3>Ingresa el nuevo nombre</h3>
                         <label class="hidden " for="nickname"><br></label>
-                        <input class="input-log" type="text" name="nombre" id="nickname" value="<%= resuModificar.nombre %>"  />                    
-                        <% if (locals.errors && errors.nombre) { %>
+                        <input class="input-log" type="text" name="name" id="nickname" value=<%= resuModificar.name %> >                    
+                        <% if (locals.errors && errors.name) { %>
                             <div class="errors">
-                                <%= errors.nombre.msg %> 
+                                <%= errors.name.msg %> 
                             </div>
                         <% } %>
                     </div>
@@ -31,10 +31,21 @@
                     <div class="div-input">
                         <h3>Ingresa el precio</h3>
                         <label class="hidden " for="nickname"><br></label>
-                        <input class="input-log" type="text" name="precio" id="nickname" value=<%= resuModificar.precio %> />
-                        <% if (locals.errors && errors.email) { %>
+                        <input class="input-log" type="text" name="price" id="nickname" value=<%= resuModificar.price %> >
+                        <% if (locals.errors && errors.price) { %>
                             <div class="errors">
-                                <%= errors.precio.msg %>
+                                <%= errors.price.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa el contenido</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input class="input-log" type="text" name="weight" id="nickname" value=<%= resuModificar.weight %> >
+                        <% if (locals.errors && errors.weight) { %>
+                            <div class="errors">
+                                <%= errors.weight.msg %>
                             </div>
                         <% } %>
                     </div>
@@ -42,10 +53,10 @@
                     <div class="div-input">
                         <h3>Ingresa la descripcion</h3>
                         <label class="hidden " for="nickname"> <br></label>
-                        <input class="input-log" type="text" name="descripcion" id="nickname" value=<%= resuModificar.descripcion %> />
-                        <% if (locals.errors && errors.descripcion) { %>
+                        <input class="input-log" type="text" name="description" id="nickname" value=<%= resuModificar.description %> >
+                        <% if (locals.errors && errors.description) { %>
                             <div class="errors">
-                                <%= errors.descripcion.msg %>
+                                <%= errors.description.msg %>
                             </div>
                         <% } %>
                     </div>
@@ -53,10 +64,21 @@
                     <div class="div-input">
                         <h3>Ingresa la categoria</h3>
                         <label class="hidden " for="nickname"> <br></label>
-                        <input class="input-log" type="text" name="categoria" id="nickname" value=<%= resuModificar.categoria %> />
-                        <% if (locals.errors && errors.categoria) { %>
+                        <input class="input-log" type="text" name="category" id="nickname" value=<%= resuModificar.category %> >
+                        <% if (locals.errors && errors.category) { %>
                             <div class="errors">
-                                <%= errors.categoria.msg %>
+                                <%= errors.category.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa el stock actual</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input class="input-log" type="text" name="stock" id="nickname" value=<%= resuModificar.stock %> >
+                        <% if (locals.errors && errors.stock) { %>
+                            <div class="errors">
+                                <%= errors.stock.msg %>
                             </div>
                         <% } %>
                     </div>
@@ -71,14 +93,14 @@
                         name="prodImg" 
                         class="input-log" <%= locals.errors && errors.prodImg ? 'is-invalid' : null %> >
                     </div>
-                </form>   
+                 
                     
                     <div class="div-bottom">
                         <div class="div-input">
                         <button class="bottom-log-continuar" type="submit">Modificar <br></button>
                         <a href="/"></a>
                     </div>
-               
+                </form>  
 
                                                    
                 

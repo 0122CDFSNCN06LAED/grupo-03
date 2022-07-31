@@ -39,8 +39,14 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
       deletedAt: false
     };
-  
     const User = sequelize.define(alias, columns, config);
+
+    User.associate = function (models) {
+        User.hasOne(models.Order, {
+            as: "order",
+            foreignKey: "user_id",
+        });
+    }   
     
     
     return User;

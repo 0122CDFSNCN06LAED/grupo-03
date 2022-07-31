@@ -1,13 +1,26 @@
 const express=require("express");
 const productController = require("../controllers/product-controller");
 const productRouter = express.Router();
+const productValidator = require("../middleware/product-Validation");
+const uploadFile = require('../middleware/multer');
 
 //rutas productos
-productRouter.get("/product", productController.create);//nuevo		
-productRouter.get("/product/:id", productController.remove);//borrar
-productRouter.get("/product/:id", productController.update);//modificar
-productRouter.get("/product", productController.index);//listar
-productRouter.get("/product/:id", productController.mostrar);//listar un solo producto
+productRouter.get("/create", productController.create);//nuevo	
+productRouter.post("/newProduct", uploadFile.single("prodImg"), productValidator,
+    productController.newProduct);//nuevo
+
+productRouter.get("/index", productController.index);//listar
+	
+productRouter.get("/detalle/:id", uploadFile.single("prodImg"), 
+    productController.detail);//Detalla 1 producto
+productRouter.get("/update/:id", productController.modificar);//modificar
+productRouter.put("/:id", uploadFile.single("prodImg"), 
+  productController.update);//modificar
+
+productRouter.get("/edit/:id", productController.edit);//listar un solo producto
+productRouter.delete("/:id", productController.remove);//borrar
+
+productRouter.get("/home", productController.home)
 
 
 

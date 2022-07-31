@@ -19,6 +19,7 @@ const userRouter = require("./src/routers/users-router.js");
 const mainRouter = require("./src/routers/main-router.js");
 const cookieParser = require("cookie-parser");
 const apiUsersRouter = require("./src/routers/api/api-users-router");
+const cartRouter = require("./src/routers/cart-router");
 
 app.use(session({
 	secret: "Shhh, It's a secret",
@@ -42,6 +43,7 @@ app.use(methodOverride("_method")); // Para poder pisar el method="POST" en el f
 app.use("/api", apiUsersRouter);
 app.use("/product",productRouter);
 app.use("/user",userRouter);
+app.use("/carrito",cartRouter)
 app.use("/",mainRouter);
 
 

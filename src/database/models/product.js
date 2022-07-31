@@ -9,15 +9,15 @@ module.exports = (sequelize, dataTypes) => {
 
         },
         name: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         price: {
-            type: dataTypes.FLOAT(10).UNSIGNED,
+            type: dataTypes.FLOAT.UNSIGNED,
             allowNull: false
         },
         weight: {
-            type: dataTypes.INTEGER(10),
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
         description: {
@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         image: {
-            type: dataTypes.STRING(200),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         category_id: {
@@ -33,19 +33,20 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         stock: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
     };
     const config = {
         timestamps: false,
         deletedAt: false,
+        tableName:"product",
       };
     
       const Product = sequelize.define(alias, columns, config);
       
       Product.associate = function (models) {
-        Product.hasOne(models.Category, {
+        Product.belongsTo(models.Category, {
             // models.Movie -> Movies es el valor de alias en movie.js
             as: "category",
             foreignKey: "category_id",

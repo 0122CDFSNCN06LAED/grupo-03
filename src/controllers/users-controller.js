@@ -176,7 +176,6 @@ module.exports = {
     home: (req, res) => {
         const auth = req.session.userLogueado;
         if (auth) {
-            console.log(auth);
             if (auth.categoria === 1) {
                 res.redirect("/user/listar/")
             } else {

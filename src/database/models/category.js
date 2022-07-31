@@ -12,17 +12,13 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(200),
             allowNull: false,
         },
-        description:{
-            type: dataTypes.TEXT
-        }
     }
     const config = {
         timestamps: false,
+        tableName:"category"
     }
     const Category = sequelize.define(alias, columns, config)
 
-    
-    
     return Category;
 
 

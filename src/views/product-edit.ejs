@@ -31,45 +31,24 @@
             <input
               class="input-log"
               type="text"
-              name="nombre"
+              name="name"
               id="nickname"
               value="<%= resuEdit.id %>"
             />
-            <% if (locals.errors && errors.nombre) { %>
-            <div class="errors"><%= errors.nombre.msg %></div>
-            <% } %>
           </div>
 
           <div class="div-input">
-            <h3>Precio</h3>
+            <h3>Nombre del producto</h3>
             <label class="hidden" for="nickname"><br /></label>
-            <input class="input-log" type="number" name="precio" id="nickname" value="<%= resuEdit.precio %>" />
-            <% if (locals.errors && errors.precio) { %>
-              <div class="errors"><%= errors.precio.msg %></div>
-              <% } %>
-            </div>
+            <input
+              class="input-log"
+              type="text"
+              name="name"
+              id="nickname"
+              value="<%= resuEdit.name %>"
+            />
+          </div>
 
-            <div class="div-input">
-              <h3>Descripcion</h3>
-              <label class="hidden " for="nickname"><br></label>
-              <input class="input-log" type="text" name="descripcion" id="nickname" value=<%= resuEdit.descripcion %> />
-              <% if (locals.errors && errors.descripcion) { %>
-                  <div class="errors">
-                      <%= errors.descripcion.msg %>
-                  </div>
-              <% } %>
-            </div>
-
-            <div class="div-input">
-                <h3>Categoria</h3>
-                <label class="hidden " for="nickname"><br></label>
-                <input class="input-log" type="text" name="categoria" id="nickname" value=<%= resuEdit.categoria %> />
-                <% if (locals.errors && errors.categoria) { %>
-                    <div class="errors">
-                        <%= errors.categoria.msg %>
-                    </div>
-                <% } %>
-              </div>
           <input type="submit" value="" />
         </form>
 

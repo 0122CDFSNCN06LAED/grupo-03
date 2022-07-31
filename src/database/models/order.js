@@ -8,10 +8,6 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
 
         },
-        order_address: {
-            type: dataTypes.STRING(200),
-            allowNull: false,
-        },
         user_id:{
             type: dataTypes.BIGINT(11)
         }
@@ -22,11 +18,6 @@ module.exports = (sequelize, dataTypes) => {
     const Order = sequelize.define(alias, columns, config)
 
     Order.associate = function (models) {
-        Order.belongsTo(models.Category, {
-            // models.Movie -> Movies es el valor de alias en movie.js
-            as: "order",
-            foreignKey: "user_id"
-        })
         Order.hasMany(models.OrderDetail, {
             as: "order_details", foreignKey: "order_id"
         })

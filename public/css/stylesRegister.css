@@ -168,7 +168,7 @@ h3{
   }
   .list_index2 {
     margin-left: 30px;
-    width: 250px;
+    width: 150px;
     text-align:left;
   }
   .list_index3 {
@@ -177,7 +177,7 @@ h3{
     margin-left: 28px;
   }
   .list_index4 {
-    margin-left: 230px;
+    margin-left: 130px;
     width: 250px;
     text-align:left;
   }
@@ -186,13 +186,51 @@ h3{
     text-align:left;
     width: 35px;
     height: 35px;
-    margin-left: 30px;
+    margin-left: 50px;
   }
+  .list_index50 {
+    width: 150px;
+    text-align:left;
+    width: 40px;
+    height: 35px;
+    margin-left: 160px;
+  }
+  
   .list_index6 {
     text-align:left;
     width: 150px;
     height:150px;
     margin-left: 30px;
+  }
+  .list_index21 {
+    margin-left: 20px;
+    width: 180px;
+    text-align:left;
+  }
+  .list_index22 {
+    margin-left: 0px;
+    width: 190px;
+    text-align:left;
+  }
+  .list_index23 {
+    margin-left: 0px;
+    width: 150px;
+    text-align:left;
+  }
+  .list_index24 {
+    margin-left: 50px;
+    width: 150px;
+    text-align:left;
+  }
+  .list_index25 {
+    margin-left: 0px;
+    width: 190px;
+    text-align:left;
+  }
+  .list_index26 {
+    margin-left: 0px;
+    width: 100px;
+    text-align:left;
   }
  .menu-list{
      display:flex;

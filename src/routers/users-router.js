@@ -19,6 +19,7 @@ userRouter.post("/processRegister", uploadFile.single('imgUsers'), userRegValida
 
 userRouter.get("/listar", uploadFile.single('imgUsers'),
   userController.index);//listar
+  
 userRouter.get("/detalle/:id", uploadFile.single('imgUsers'), userController.detail);//detalle
 userRouter.get("/home", userController.home)
 
