@@ -2,7 +2,7 @@ const express=require("express");
 const productController = require("../controllers/product-controller");
 const productRouter = express.Router();
 const productValidator = require("../middleware/product-Validation");
-const uploadFile = require('../middleware/multer');
+const uploadFile = require('../middleware/multerProd');
 
 //rutas productos
 productRouter.get("/create", productController.create);//nuevo	

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
             aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,84 +27,29 @@
     <!-- TIENDA -->
     <section class="store">
         <div class="container">
+            <h3>Carrito de compras de <%= user.nombre %></h3>
+           
             <div class="items">
-                <div class="row">
+                <% products.forEach(product => { %>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="item shadow mb-4">
+                                <form method="post" action="/carrito/add">
+                                <h3 class="item-title"><%= product.name %></h3>
+                                <img class="item-image" src="/img/prodImg/<%= product.image %>" >
+                                <div class="item-details">
+                                    <h4 class="item-price">$<%= product.price %></h4>
+                                        <input type="number" name="newQuantity" value="<%= product.quantity %>">
+                                        <input type="hidden" name="productId" value="<%= product.id %>">
 
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">CBD 1</h3>
-                            <img class="item-image" src="./img/prodImg/cbd1.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$9.99</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                                        <button class="item-button btn btn-primary addToCart" type="submit">AÑADIR AL CARRITO</button>
+                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">CBD 2</h3>
+                <% }) %>
 
-                            <img class="item-image" src="./img/prodImg/cbd1.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$9.99</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">CBD 3</h3>
-
-                            <img class="item-image" src="./img/prodImg/cbd1.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$9.99</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">CBD 4</h3>
-
-                            <img class="item-image" src="./img/prodImg/cbd1.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$19.99</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">CBD 5</h3>
-
-                            <img class="item-image" src="./img/prodImg/cbd1.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$19.99</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">CBD 6</h3>
-
-                            <img class="item-image" src="./img/prodImg/cbd1.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$6.99</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -116,22 +60,29 @@
             <h1 class="text-center">CARRITO</h1>
             <hr>
             <div class="row">
-                <div class="col-6">
-                    <div class="shopping-cart-header">
-                        <h6>Producto</h6>
+                <% user.Order.OrderDetails.forEach(orderdetail => { %>               
+                    <div class="col-6">
+                        <div class="shopping-cart-header">
+                            <h6>Producto</h6>
+                            <p><%= orderdetail.Product.name %></p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-2">
-                    <div class="shopping-cart-header">
-                        <h6 class="text-truncate">Precio</h6>
+                    <div class="col-2">
+                        <div class="shopping-cart-header">
+                            <h6 class="text-truncate">Precio</h6>
+                            <p><%= orderdetail.Product.price %></p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="shopping-cart-header">
-                        <h6>Cantidad</h6>
+                    <div class="col-4">
+                        <div class="shopping-cart-header">
+                            <h6>Cantidad</h6>
+                            <p><%= orderdetail.quantity %></p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                                     
+                <% }) %>
+            </div>     
+                
             <!-- ITEMS DEL CARRITO -->
             <div class="shopping-cart-items shoppingCartItemsContainer">
             </div>
@@ -142,7 +93,7 @@
                 <div class="col-12">
                     <div class="shopping-cart-total d-flex align-items-center">
                         <p class="mb-0">Total</p>
-                        <p class="ml-4 mb-0 shoppingCartTotal">$0</p>
+                        <p class="ml-4 mb-0 shoppingCartTotal">$<%= totalPrice %></p>
                         <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
                             data-delay="2000">
                             <div class="toast-header">
@@ -156,8 +107,10 @@
                                 Se aumentó correctamente la cantidad
                             </div>
                         </div>
-                        <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
-                            data-target="#comprarModal">Comprar</button>
+                        <form method="post" action="/carrito/buy">
+                            <button class="btn btn-success ml-auto comprarButton" type="submit" data-toggle="modal"
+                                data-target="#comprarModal">Comprar</button>
+                        </form>
                     </div>
                 </div>
             </div>

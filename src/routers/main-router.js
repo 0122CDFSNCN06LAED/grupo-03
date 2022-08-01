@@ -7,7 +7,7 @@ const mainController = require("../controllers/main-controller");
 
 //rutas main
 mainRouter.get("/", mainController.home);
-mainRouter.get("/carrito", mainController.carrito);
+
 mainRouter.get("/productDetail", mainController.productDetail);
 
 

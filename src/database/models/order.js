@@ -14,12 +14,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const config = {
         timestamps: false,
+        tableName:"orders"
     }
     const Order = sequelize.define(alias, columns, config)
 
     Order.associate = function (models) {
         Order.hasMany(models.OrderDetail, {
-            as: "order_details", foreignKey: "order_id"
+            foreignKey: "order_id"
         })
     }
     return Order;

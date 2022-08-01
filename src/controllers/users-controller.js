@@ -130,6 +130,29 @@ module.exports = {
     //Borra el registro seleccionado 
     remove: async (req, res) => {
         const delId = req.params.id;
+        const user = await db.User.findByPk(delId, {
+            include: {
+                model: db.Order,
+                include: {
+                    model: db.OrderDetail,
+                    include: {
+                        model: db.Product
+                    }
+                }
+            }
+        })
+        user.Order.OrderDetails.forEach(async(orderdetail) => {
+            await db.OrderDetail.destroy({
+                where: {
+                    id: orderdetail.id
+                }
+            })
+        })
+        await db.Order.destroy({
+            where:{
+                id:user.Order.id
+            }
+        })
         const resuDelete = await db.User.destroy({ where: { id: delId }, force: true })
         res.redirect("/user/logout");
     },

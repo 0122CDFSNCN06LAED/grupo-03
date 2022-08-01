@@ -37,13 +37,13 @@ module.exports = (sequelize, dataTypes) => {
   
     const config = {
       timestamps: false,
-      deletedAt: false
+      deletedAt: false,
+      tableName:"users"
     };
     const User = sequelize.define(alias, columns, config);
 
     User.associate = function (models) {
         User.hasOne(models.Order, {
-            as: "order",
             foreignKey: "user_id",
         });
     }   

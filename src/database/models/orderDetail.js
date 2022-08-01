@@ -25,14 +25,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const config = {
         timestamps: false,
+        tableName:"order_details"
     }
     const OrderDetail = sequelize.define(alias, columns, config)
 
     OrderDetail.associate = function (models) {
         OrderDetail.belongsTo(models.Product, {
-            // models.Movie -> Movies es el valor de alias en movie.js
-            as: "product",
-            foreignKey: "product_id"
+           foreignKey: "product_id"
         })
         
     }

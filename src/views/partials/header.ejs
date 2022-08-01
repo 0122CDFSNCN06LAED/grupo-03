@@ -26,10 +26,11 @@
     </p>
   </div>
   <div class="main-header__container">
-    <a href="/carrito" class="main-header__btn"
+    <% if(locals.userLogueado){ %>
+    <a href="/carrito/" class="main-header__btn"
       >Carrito <i class="fa-solid fa-cart-shopping"></i
     ></a>
-    <% if(locals.userLogueado){ %>
+   
     <span class="main-header__hola">Hola <%= locals.userLogueado.nombre %></span>
     <ul>
       <li><a href="/user/logout">Logout</a></li>
