@@ -140,9 +140,52 @@ Link al tablero: https://app.mural.co/invitation/mural/biofisica5105/16490225132
 ================================================================================================
 
 # SPRINT 8
+- Se definió la funcionalidad entre administradores y usuarios, se trasladó a la carpeta de      middleware el multer, se completaron las validaciones del backend, se codificó el lockout.
 
-================================================================================================
+- Se agregó la vista de Detalle de Producto junto a modificaciones en el CSS.
 
+- Se hicieron cambios en el css y ejs del Detalle de Producto.
 
+- Se empezaron las funcionalidades de productos y los códigos del backend para el react.
+
+- Se terminó de codificar el crud de productos.
+
+- Se agregaron las funciones del carrito de compra.
+
+- Push Principal del Dashboard hecho en react, falta agregar funcionalidades ligadas a la base de datos.
+
+- Se implementó pagina de 'Error 404'
+
+- Se actualizó TRELLO y archivo retro.md con tareas concluidas
+
+*************************************************************************************
+** Link tablero Trello: https://trello.com/b/AvbuHppS/grupo-03-proyecto-integrador **
+*************************************************************************************
+===============================================================================================
+
+                     .                          
+                     M                          
+                    dM                          
+                    MMr                         
+                   4MMML                  .     
+                   MMMMM.                xf     
+   .              "MMMMM               .MM-     
+    Mh..          +MMMMMM            .MMMM      
+    .MMM.         .MMMMML.          MMMMMh      
+     )MMMh.        MMMMMM         MMMMMMM       
+      3MMMMx.     'MMMMMMf      xnMMMMMM"       
+      '*MMMMM      MMMMMM.     nMMMMMMP"        
+        *MMMMMx    "MMMMM\    .MMMMMMM=         
+         *MMMMMh   "MMMMM"   JMMMMMMP           
+           MMMMMM   3MMMM.  dMMMMMM            .
+            MMMMMM  "MMMM  .MMMMM(        .nnMP"
+=..          *MMMMx  MMM"  dMMMM"    .nnMMMMM*  
+  "MMn...     'MMMMr 'MM   MMM"   .nMMMMMMM*"   
+   "4MMMMnn..   *MMM  MM  MMP"  .dMMMMMMM""     
+     ^MMMMMMMMx.  *ML "M .M*  .MMMMMM**"        
+        *PMMMMMMhn. *x > M  .MMMM**""           
+           ""**MMMMhx/.h/ .=*"                  
+                    .3P"%....                   
+                  nP"     "*MMnx  
 
 
