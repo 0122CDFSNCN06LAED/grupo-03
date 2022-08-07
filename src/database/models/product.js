@@ -3,9 +3,9 @@ module.exports = (sequelize, dataTypes) => {
     const columns = {
         id: {
             type: dataTypes.BIGINT(11),
-                primaryKey: true,
-                allowNull: false,
-                autoIncrement: true
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: true
 
         },
         name: {
@@ -40,18 +40,27 @@ module.exports = (sequelize, dataTypes) => {
     const config = {
         timestamps: false,
         deletedAt: false,
-        tableName:"product",
-      };
-    
-      const Product = sequelize.define(alias, columns, config);
-      
-      Product.associate = function (models) {
+        tableName: "product",
+    };
+
+    const Product = sequelize.define(alias, columns, config);
+
+    Product.associate = function (models) {
         Product.belongsTo(models.Category, {
             // models.Movie -> Movies es el valor de alias en movie.js
             as: "category",
             foreignKey: "category_id",
+            onDelete: "cascade",
+        });
+    };
+    Product.associate = function (models) {
+        Product.belongsTo(models.OrderDetail, {
+            // models.Movie -> Movies es el valor de alias en movie.js
+            foreignKey: "order_id",
+            onDelete: "cascade",
         });
 
     };
-      return Product;
-  }
+
+    return Product;
+};

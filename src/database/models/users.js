@@ -42,13 +42,13 @@ module.exports = (sequelize, dataTypes) => {
     };
     const User = sequelize.define(alias, columns, config);
 
-    User.associate = function (models) {
+    /*User.associate = function (models) {
         User.hasOne(models.Order, {
-            foreignKey: "user_id",
-        });
-    }   
-    
-    
+            foreignKey: "order_id",
+            onDelete: "cascade",
+        })
+    }*/
+  
     return User;
 }
             

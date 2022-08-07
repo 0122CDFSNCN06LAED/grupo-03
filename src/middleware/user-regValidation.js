@@ -11,7 +11,7 @@ module.exports = [
 		.notEmpty()
 		.withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail()
-		.withMessage('Debes escribir un formato de correo válido')
+		.withMessage('Ingresar un email válido')
 		.isLength({ min: 8 })
 		.withMessage('Tienes que tener mas de 8 letras'),
 	check('telefono')

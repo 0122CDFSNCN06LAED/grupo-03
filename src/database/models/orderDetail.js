@@ -31,10 +31,12 @@ module.exports = (sequelize, dataTypes) => {
 
     OrderDetail.associate = function (models) {
         OrderDetail.belongsTo(models.Product, {
-           foreignKey: "product_id"
+           foreignKey: "product_id",
+           onDelete: "cascade",
         })
         
     }
+
     return OrderDetail;
 
 

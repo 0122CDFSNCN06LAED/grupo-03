@@ -20,9 +20,18 @@ module.exports = (sequelize, dataTypes) => {
 
     Order.associate = function (models) {
         Order.hasMany(models.OrderDetail, {
-            foreignKey: "order_id"
+            foreignKey: "order_id",
+            onDelete: "cascade",
         })
     }
+
+    /*Order.associate = function (models) {
+        Order.hasMany(models.User, {
+            foreignKey: "user_id",
+            onDelete: "cascade",
+        })
+    }*/
+
     return Order;
 
 
