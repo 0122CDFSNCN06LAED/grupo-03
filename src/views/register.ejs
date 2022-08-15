@@ -27,11 +27,12 @@
         <div>
             
 
-            <form action="/user/processRegister" id="register" method="POST" enctype="multipart/form-data" >
+            <form action="/user/processRegister" name="myForm" id="register" 
+                    method="POST" enctype="multipart/form-data" >
                 <div class="div-input">
                     <h3>Nombre y apellido</h3>
                     <label class="hidden " for="nickname"><br></label>
-                    <input class="input-log" type="text" name="nombre" id="nickname" placeholder="Nombre y Apellido" />
+                    <input class="input-log" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" />
                     <% if (locals.errors && errors.nombre) { %>
                         <div class="errors">
                             <%= errors.nombre.msg %> 
@@ -42,7 +43,7 @@
                 <div class="div-input">
                     <h3>Correo eléctronico</h3>
                     <label class="hidden" for="nickname"><br></label>
-                    <input class="input-log" type="text" name="email" id="nickname" placeholder="e-mail" />
+                    <input class="input-log" type="text" name="email" id="email" placeholder="e-mail" />
                     <% if (locals.errors && errors.email) { %>
                         <div class="errors">
                             <%= errors.email.msg %>
@@ -53,7 +54,7 @@
                 <div class="div-input">
                     <h3>Número de telefono</h3>
                     <label class="hidden" for="nickname"> <br></label>
-                    <input class="input-log" type="text" name="telefono" id="nickname" placeholder="Numero de telefono" />
+                    <input class="input-log" type="text" name="telefono" id="telefono" placeholder="Numero de telefono" />
                     <% if (locals.errors && errors.telefono) { %>
                         <div class="errors">
                             <%= errors.telefono.msg %>

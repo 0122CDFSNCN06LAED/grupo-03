@@ -31,19 +31,17 @@
       >Carrito <i class="fa-solid fa-cart-shopping"></i
     ></a>
    
-    <span class="main-header__hola">Hola <%= locals.userLogueado.nombre %></span>
-    <ul>
+    <span class="main-header__hola">Hola <%= locals.userLogueado.nombre %>!</span>
+    <ul class="main-header__logout">
       <li><a href="/user/logout">Logout</a></li>
     </ul>
     <% } else { %>
-    <a href="/user/login" class="main-header__link"
-      ><i class="fas fa-user"></i
-    ></a>
+      <a href="/user/login" class="main-header__link"><i class="fas fa-user"></i></a>
     <% } %>
     <input
-      type="search"
-      class="main-header__input"
-      placeholder="Buscar productos"
+    type="search"
+    class="main-header__input"
+    placeholder="Buscar productos"
     /><i class="fas fa-search"></i>
   </div>
 </div>

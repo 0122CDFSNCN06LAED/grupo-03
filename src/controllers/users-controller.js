@@ -97,7 +97,8 @@ module.exports = {
         //const jsonTxt = JSON.stringify(userData, null, 2)
         //fs.writeFileSync(usersFilePath, jsonTxt, "utf-8");
 
-        await db.User.create(user)
+        const newUser = await db.User.create(user)
+        await db.Order.create({ user_id: newUser.id})
 
         res.redirect("/user/login");
     },
@@ -141,18 +142,22 @@ module.exports = {
                 }
             }
         })
-        user.Order.OrderDetails.forEach(async(orderdetail) => {
-            await db.OrderDetail.destroy({
-                where: {
-                    id: orderdetail.id
+
+        if(user.Order){
+            user.Order.OrderDetails.forEach(async(orderdetail) => {
+                await db.OrderDetail.destroy({
+                    where: {
+                        id: orderdetail.id
+                    }
+                })
+            })
+            await db.Order.destroy({
+                where:{
+                    id:user.Order.id
                 }
             })
-        })
-        await db.Order.destroy({
-            where:{
-                id:user.Order.id
-            }
-        })
+        }
+        
         const resuDelete = await db.User.destroy({ where: { id: delId }, force: true })
         res.redirect("/user/logout");
     },

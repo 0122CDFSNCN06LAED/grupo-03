@@ -33,43 +33,41 @@ async function add(req, res) {
 async function list(req, res) {
     try {
         const userLogueado = req.session.userLogueado
-        console.log(userLogueado)
+        
         const user = await db.User.findByPk(userLogueado.id, {
             include: {
                 model: db.Order,
                 include: {
                     model: db.OrderDetail,
-                    include: {
-                        model: db.Product
+                        include: {
+                            model: db.Product
+                        }
                     }
                 }
-            }
-        })
+            });
 
-        if (!user.Order) {
-            await db.Order.create({
-                user_id: user.id
-            })
-            res.redirect("/carrito")
-        }
+        const products = await db.Product.findAll();
 
-        const products = await db.Product.findAll()
-        let totalPrice = 0
-        user.Order.OrderDetails.forEach(orderdetailt => {
-            totalPrice += orderdetailt.price * orderdetailt.quantity
+        
+        let totalPrice = 0;
+        user.Order.OrderDetails
+            .forEach(orderdetailt => {
+                totalPrice += orderdetailt.price * orderdetailt.quantity
         });
-        res.render("carrito", { user, products, totalPrice })
-        async function remove(req, res)  {
-            //const delId = req.params.id;
-            await db.Order.destroy({ where: { force: true }})
-            await db.OrderDetail.destroy({ where: { force: true }})
-            res.redirect("/");
-        }
+        
+        res.render("carrito", { user, products, totalPrice });
     }
     
     catch (error) {
-        //res.redirect("/")
+        res.send(error)
     }
+}
+
+async function remove(req, res)  {
+    //const delId = req.params.id;
+    await db.Order.destroy({ where: { force: true }})
+    await db.OrderDetail.destroy({ where: { force: true }})
+    res.redirect("/");
 }
 
 async function modifyQuantity(req, res) {
@@ -92,7 +90,7 @@ async function modifyQuantity(req, res) {
 async function buy(req,res){
     try {
         const userLogueado = req.session.userLogueado
-        console.log(userLogueado)
+        //console.log(userLogueado)
         const user = await db.User.findByPk(userLogueado.id, {
             include: {
                 model: db.Order,
@@ -117,6 +115,7 @@ async function buy(req,res){
         res.redirect("/")
     }
 }
+
 module.exports = {
     add,
     list,

@@ -20,6 +20,7 @@ const mainRouter = require("./src/routers/main-router.js");
 const cookieParser = require("cookie-parser");
 const apiUsersRouter = require("./src/routers/api/api-users-router");
 const cartRouter = require("./src/routers/cart-router");
+const apiProductsRouter = require("./src/routers/api/api-products-router")
 
 app.use(session({
 	secret: "Shhh, It's a secret",
@@ -40,7 +41,8 @@ app.set("views", path.join(__dirname, "src/views"));
 app.use(cors());
 //app.use(logger('dev'));
 app.use(methodOverride("_method")); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use("/api", apiUsersRouter);
+app.use("/api/users", apiUsersRouter);
+app.use("/api/products",apiProductsRouter)
 app.use("/product",productRouter);
 app.use("/user",userRouter);
 app.use("/carrito",cartRouter)

@@ -18,6 +18,28 @@ img {
 .main-header {
   padding: 0 20px;
 }
+
+.main-header__hola {
+  font-weight: 600;
+  font-size: 30px;
+
+}
+
+.main-header__logout li{
+  margin: 8px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color:#157B09;
+  background-color:#5AB902;
+}
+
+.main-header__logout a {
+  color: whitesmoke;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 8px;
+} 
+
 .main-header__title{
   text-align: center;
   font-size: 2.5em;
@@ -32,6 +54,9 @@ img {
 }
 .main-header__link {
   color: #333;
+  font-size: 1.2em;
+  margin: 0 10px 8px 0;
+  display: block; 
   
 }
 

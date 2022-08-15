@@ -32,10 +32,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(11),
             allowNull: false
         },
-        stock: {
-            type: dataTypes.INTEGER(11),
-            allowNull: false
-        },
     };
     const config = {
         timestamps: false,
@@ -54,10 +50,10 @@ module.exports = (sequelize, dataTypes) => {
         });
     };
     Product.associate = function (models) {
-        Product.belongsTo(models.OrderDetail, {
+        Product.belongsTo(models.Category, {
             // models.Movie -> Movies es el valor de alias en movie.js
-            foreignKey: "order_id",
-            onDelete: "cascade",
+            as: "category",
+            foreignKey: "category_id",
         });
 
     };

@@ -18,7 +18,7 @@ module.exports = [
 		.notEmpty()
 		.withMessage('Tienes que anotar un numero de telefono')
 		.isLength({ min: 8, })
-		.withMessage('Tienes que tener mas de 6 numeros'),
+		.withMessage('Tienes que tener mas de 7 numeros'),
 	check('password')
 		.notEmpty()
 		.withMessage('Tienes que escribir una contraseña')
@@ -27,5 +27,17 @@ module.exports = [
 	check('passwordConf')
 		.notEmpty()
 		.withMessage('Tienes que confirmar la contraseña'),
-	//Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).	
+	check('imgUsers').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+		/*if (file) {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+		}*/
+
+		return true;
+	})
 ];
