@@ -48,6 +48,10 @@ app.use("/user",userRouter);
 app.use("/carrito",cartRouter)
 app.use("/",mainRouter);
 
+app.use((req, res, next)=>{
+	res.status(404).render('not-found')
+})
+
 
 
 

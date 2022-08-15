@@ -390,6 +390,64 @@ transition: all 0.5s;
   color: #555;
 }
 
+.error {
+  display: inline-block;
+  background-image: linear-gradient(to right, yellow, orange );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  margin-left: 10%;
+  margin-top: 0%;
+  padding-top: 0px;
+  /*text-align: center;*/
+  font-weight: 900;
+  
+  
+}
+.error404 {
+  display: inline-block;
+  background-image: linear-gradient(to right, orange, yellow );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 180px;
+  margin-left: 10%;
+  margin-top: 0%;
+  padding-bottom: 0px;
+  font-weight: 900;
+  
+}
+
+
+h6 {
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+  display: none;
+}
+
+h5 {
+  font-style:oblique;
+  font-size: 30px;
+  text-align: center;
+  display: none;
+}
+
+.body-error {
+  background-image:
+  url('../img/cannabis-medicinal-extracto-aceite-botella-formula-cbd-thc_33736-3253.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.error-msg {
+  margin-left: 10%;
+  font-size: 30px;
+  font-weight: 300px;
+  color: rgb(255, 189, 68);
+}
+
 /*Estilos para tablet*/
 @media screen and (min-width:768px) {
   .slider{
