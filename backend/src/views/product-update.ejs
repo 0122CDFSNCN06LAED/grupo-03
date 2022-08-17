@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang=”en”>
+    <head>
+        <%- include("./partials/head") %>
+    </head>
+
+    <body class="body">
+        <header>
+            <div class="header-div">
+                <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+            </div>
+            <h1>
+                NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+            </h1>
+        </header>
+
+        <main>
+            <div> 
+                <form action="/product/<%= resuModificar.id %>?_method=PUT" id="productUpdate" method="POST" enctype="multipart/form-data" >                    
+                    <div class="div-input">
+                        <h3>Ingresa el nuevo nombre</h3>
+                        <label class="hidden " for="nickname"><br></label>
+                        <input class="input-log" type="text" name="name" id="nickname" value=<%= resuModificar.name %> >                    
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="errors">
+                                <%= errors.name.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa el precio</h3>
+                        <label class="hidden " for="nickname"><br></label>
+                        <input class="input-log" type="text" name="price" id="nickname" value=<%= resuModificar.price %> >
+                        <% if (locals.errors && errors.price) { %>
+                            <div class="errors">
+                                <%= errors.price.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa el contenido</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input class="input-log" type="text" name="weight" id="nickname" value=<%= resuModificar.weight %> >
+                        <% if (locals.errors && errors.weight) { %>
+                            <div class="errors">
+                                <%= errors.weight.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa la descripcion</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input class="input-log" type="text" name="description" id="nickname" value=<%= resuModificar.description %> >
+                        <% if (locals.errors && errors.description) { %>
+                            <div class="errors">
+                                <%= errors.description.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa la categoria</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        <input class="input-log" type="text" name="category" id="nickname" value=<%= resuModificar.category %> >
+                        <% if (locals.errors && errors.category) { %>
+                            <div class="errors">
+                                <%= errors.category.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <h3>Ingresa la imagen</h3>
+                        <label class="hidden " for="nickname"> <br></label>
+                        
+                        <input 
+                        type="file" 
+                        id="imagen" 
+                        name="prodImg" 
+                        class="input-log" <%= locals.errors && errors.prodImg ? 'is-invalid' : null %> >
+                    </div>
+                 
+                    
+                    <div class="div-bottom">
+                        <div class="div-input">
+                        <button class="bottom-log-continuar" type="submit">Modificar <br></button>
+                        <a href="/"></a>
+                    </div>
+                </form>  
+
+                                                   
+                
+                    <p class="need-container"><a class="need" href="/help">
+                        Necesito ayuda para ingresar </a>
+                    </p>       
+                        
+            </div>
+        </main>
+
+        <footer>
+            <%- include("./partials/footer-log-reg") %>
+        </footer>
+    </body>
+
+</html>

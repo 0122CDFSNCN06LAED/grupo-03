@@ -1,0 +1,242 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.body {
+    background-color: white;
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+
+.header-div {
+    background-color: #5AB902;
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+i {
+    text-decoration: none;
+}
+
+.back-arrow {
+    color: rgb(155, 235, 140);
+    font-size: 40px;
+    margin-left: 10px;
+    display: inline;
+    text-decoration: none;
+}
+
+.arrow {
+    color: rgb(255, 255, 255);
+}
+
+.nutrifarco {
+    text-align: center;
+    padding: auto;
+    margin-top: 70px;
+    text-align: center;
+    text-align: center;
+    font-size: 3em;
+    color: #5AB902;
+    font-family: "Poppins";
+}
+
+.titulo-login{
+    text-align: center;
+}
+
+.img-logo {
+
+    display: inline-block;
+    width: 30px;
+}
+
+.inicia-sesion{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #157B09;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+main {
+    margin-bottom: 10px;
+}
+
+.div-input {
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.input-log {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #5AB902;
+    font-size: 20px;
+}
+
+.input-log:focus {
+    outline: none;
+}
+
+
+.hidden {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    
+    color: #0C4207;
+}
+
+.recordar{
+    font-size: 18px;
+    font-weight: bold;
+}
+.checkbox{
+    text-align: center;
+}
+
+.bottom-log-continuar {
+    width: 70%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #157B09;
+    color: white;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.bottom-log-continuar:hover {
+    background-color: #5AB902;
+    font-size: 20px;
+}
+
+.bottom-log-crear:hover {
+    color: #5AB902;
+    font-size: 21px;
+}
+
+
+
+.bottom-log-crear {
+    min-width: 15%;
+    height: 40px;
+    /*border: none;*/
+    border-radius: 10px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #157B09;
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.div-bottom {
+    text-align: center;
+}
+
+
+
+.need {
+    color: #0C4207;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.need:hover {
+    color: #5AB902;
+    font-size: 18px;
+}
+
+.need-container {
+    margin-top: 70px;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    border-top: 2px solid rgb(209, 209, 209);
+    color: black;
+    font-size: 12px;
+    text-align: center;
+}
+
+.cuidamos {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+h3{
+    color: rgba(0,0,0,.9);
+    text-align: center;
+    padding: auto;
+}
+
+/* ============Tablet + ==========*/
+@media (min-width: 361px) {
+    .input-log {
+        max-width: 300px;
+        margin-left: calc(50% - 150px);
+        margin-right: calc(50% - 150px);
+
+    }
+
+    .hidden {
+        margin-left: calc(50% - 150px);
+    }
+
+    .bottom-log-continuar {
+        max-width: 240px;
+        margin-left: calc(50% - 150px);
+        margin-right: calc(50% - 150px);
+
+    }
+
+    .bottom-log-crear {
+        max-width: 240px;
+        margin-left: calc(50% - 150px);
+        margin-right: calc(50% - 150px);
+
+    }
+
+
+}
+
+/* ============Laptop + ==============*/
+
+@media (min-width: 768px) {}
+
+
+/* =================desktop +================== */
+@media (min-width: 1200px) {}

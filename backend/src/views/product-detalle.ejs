@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang=”en”>
+  <head>
+      <%- include("./partials/head") %>
+  </head>
+
+  <body class="body">
+    <header>
+      <div class="header-div">
+        <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+      </div>
+        <h1>
+            NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+        </h1>
+      </header>
+
+
+    <main>
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <h2 class="product">Detalle del Producto <%= resuDetail.id %> </h2>
+          </div>
+        </div>       
+                  
+        <div >            
+          <p class="list_index1"> Id: <%= resuDetail.id %> </p>
+          <p class="list_index2"> Nombre: <%= resuDetail.name %> </p>
+          <p class="list_index2"> Precio: <%= resuDetail.price %> </p>
+          <p class="list_index2"> Contenido: <%= resuDetail.weight %> </p>   
+          <p class="list_index2"> descripcion: <%= resuDetail.description %> </p>  
+          <p class="list_index2"> categoria: <%= resuDetail.category.name %> </p>     
+        <figure class="list_index6">
+          <img src="/img/prodImg/<%= resuDetail.image %>" alt="">
+        </figure>                        
+        </div>
+
+        <div class="div-bottom container" >
+          <a href="/product/update/<%= resuDetail.id %>"><button class="bottom-log-continuar" type="submit">Ir a modificar  </button>">
+          <a href="/product/edit/<%= resuDetail.id %>"><button class="bottom-log-continuar" type="submit">Ir a borrar </button>">
+          <a href="/"><button class="bottom-log-continuar" type="submit">Volver a pagina principal </button>           
+          </a>  
+        </div> 
+        
+       
+      </div>
+    </main>
+
+    <footer>
+      <%- include("./partials/footer-log-reg") %>
+    </footer>
+  </body>
+</html>

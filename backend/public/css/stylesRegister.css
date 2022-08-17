@@ -1,0 +1,288 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.body {
+    background-color: white;
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+
+.header-div {
+    background-color: #5AB902;
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+i {
+    text-decoration: none;
+}
+
+.back-arrow {
+    color: rgb(155, 235, 140);
+    font-size: 40px;
+    margin-left: 10px;
+    display: inline;
+    text-decoration: none;
+}
+
+.arrow {
+    color: rgb(155, 235, 140);
+}
+
+.nutrifarco {
+    text-align: center;
+    padding: auto;
+    margin-top: 70px;
+    text-align: center;
+    text-align: center;
+    font-size: 3em;
+    color: #5AB902;
+    font-family: "Poppins";
+}
+
+.titulo-login{
+    text-align: center;
+}
+
+.img {
+    width: 30px;
+}
+
+main {
+    margin-bottom: 10px;
+}
+
+.div-input {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.input-log {
+    width: 100%;
+    height: 20px;
+    border-radius: 6px;
+    text-align: center;
+    border-color: #0C4207;
+}
+
+.hidden {
+    width: 100%;
+}
+
+.bottom-log-continuar {
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #0C4207;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.bottom-log-continuar:hover {
+    background-color: #5AB902;
+}
+
+.bottom-log-crear:hover {
+    color: #5AB902;
+}
+
+
+
+.bottom-log-crear {
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0C4207;
+    background-color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.div-bottom {
+    text-align: center;
+}
+
+.need {
+    color: #0C4207;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.need:hover {
+    color: #5AB902
+}
+
+.need-container {
+    margin-top: 70px;
+}
+
+footer {
+    padding: 20px;
+    border-top: 2px solid rgb(209, 209, 209);
+    color: black;
+    font-size: 12px;
+    text-align: center;
+}
+
+.cuidamos {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+h3{
+    color: #0C4207;
+    text-align: center;
+    padding: auto;
+}
+
+  .list_index1 {
+    width: 50px;
+    text-align:center;
+    margin-left: 28px;
+  }
+  .list_index2 {
+    margin-left: 30px;
+    width: 150px;
+    text-align:left;
+  }
+  .list_index3 {
+    width: 50px;
+    text-align:center;
+    margin-left: 28px;
+  }
+  .list_index4 {
+    margin-left: 130px;
+    width: 250px;
+    text-align:left;
+  }
+  .list_index5 {
+    width: 50px;
+    text-align:left;
+    width: 35px;
+    height: 35px;
+    margin-left: 0px;
+  }
+  .list_index50 {
+    width: 150px;
+    text-align:left;
+    width: 40px;
+    height: 35px;
+    margin-left: 160px;
+  }
+  
+  .list_index6 {
+    text-align:left;
+    width: 150px;
+    height:150px;
+    margin-left: 30px;
+  }
+  .list_index21 {
+    margin-left: 20px;
+    width: 180px;
+    text-align:left;
+  }
+  .list_index22 {
+    margin-left: 0px;
+    width: 190px;
+    text-align:left;
+  }
+  .list_index23 {
+    margin-left: 0px;
+    width: 150px;
+    text-align:left;
+  }
+  .list_index24 {
+    margin-left: 50px;
+    width: 150px;
+    text-align:left;
+  }
+  .list_index25 {
+    margin-left: 0px;
+    width: 190px;
+    text-align:left;
+  }
+  .list_index26 {
+    margin-left: 0px;
+    width: 100px;
+    text-align:left;
+  }
+  .list_index27 {
+    width: 50px;
+    text-align:left;
+    width: 35px;
+    height: 35px;
+    margin-left: 40px;
+  }
+  .list_index28 {
+    width: 50px;
+    text-align:left;
+    width: 35px;
+    height: 35px;
+    margin-left: 130px;
+  }
+ .menu-list{
+     display:flex;
+    color:black
+ }
+  
+/* ============Tablet + ==========*/
+@media (min-width: 361px) {
+    .input-log {
+        max-width: 300px;
+        margin-left: calc(50% - 150px);
+        margin-right: calc(50% - 150px);
+
+    }
+
+    .hidden {
+        margin-left: calc(50% - 150px);
+    }
+
+    .bottom-log-continuar {
+        max-width: 240px;
+        margin-left: calc(50% - 150px);
+        margin-right: calc(50% - 150px);
+
+    }
+    .errors{
+        text-align: center;
+        color:red;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+}
+
+/* ============Laptop + ==============*/
+
+@media (min-width: 768px) {}
+
+
+/* =================desktop +================== */
+@media (min-width: 1200px) {}

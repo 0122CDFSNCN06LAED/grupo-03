@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <%- include("./partials/head") %>
+  </head>
+
+  <body class="body">
+    <header>
+      <div class="header-div">
+        <p class="back-arrow">
+          <a class="arrow" href="/"
+            ><i class="fas fa-arrow-alt-circle-left"></i>
+          </a>
+        </p>
+      </div>
+      <h1>
+        NutriFarco<img
+          class="img"
+          src="./img/baking-1293986_1920.png"
+          class="logo"
+        />
+      </h1>
+    </header>
+
+    <main>
+      <div>
+        <form action="/product/<%= resuEdit.id %>?_method=PUT">
+          <div class="div-input">
+            <h3>Id de producto</h3>
+            <label class="hidden" for="nickname"><br /></label>
+            <input
+              class="input-log"
+              type="text"
+              name="name"
+              id="nickname"
+              value="<%= resuEdit.id %>"
+            />
+          </div>
+
+          <div class="div-input">
+            <h3>Nombre del producto</h3>
+            <label class="hidden" for="nickname"><br /></label>
+            <input
+              class="input-log"
+              type="text"
+              name="name"
+              id="nickname"
+              value="<%= resuEdit.name %>"
+            />
+          </div>
+
+          <input type="submit" value="" />
+        </form>
+
+        <form
+          action="/product/<%= resuEdit.id %>?_method=DELETE"
+          id="productEdit"
+          method="POST"
+          enctype="single/form-data"
+        >
+          <div class="div-bottom">
+            <a href="/"
+              ><button class="bottom-log-continuar" type="submit">
+                Borrar <br /></button
+            ></a>
+          </div>
+        </form>
+
+        <p class="need-container">
+          <a class="need" href="/help"> Necesito ayuda para ingresar </a>
+        </p>
+      </div>
+    </main>
+
+    <footer><%- include("./partials/footer-log-reg") %></footer>
+  </body>
+</html>

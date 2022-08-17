@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <%- include("./partials/head") %>
+</head>
+
+
+  <body class="body">
+
+    <header>
+        <div class="header-div">
+            <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+        </div>
+
+        <h1>
+            NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+        </h1>
+
+    </header>
+
+
+    <main>
+
+        <div>
+            
+
+            <div class="row">
+              <div class="col-12">
+                <h2 class="product">Lista de usuarios</h2>
+              </div>
+            </div>
+
+            <div>
+              <nav class="menu-list" id="main-nav">
+                <ul class="menu-list">
+                  <li class="list_index1"><a href="" class="">ID</a></li>
+                  <li class="list_index2"><a href="" class="">NOMBRE</a></li>
+                  <li class="list_index3"><a href="" class="">EMAIL</a></li>
+                  <li class="list_index4"><a href="" class="">TELEFONO</a></li>
+                  <li class="list_index27"><a href="" class="">IMAGEN</a></li>
+                </ul>
+              </nav>
+            </div>                      
+          </div>
+        
+                
+              <div >
+                <nav class="main-nav" id="main-nav"></nav>
+                  <% resuList.forEach(user => { %>
+                  <ul class="menu-list">
+                    <li class="list_index1"><a href="/user/detalle/<%= user.id %>" class=""><p><%= user.id %> </p></a></li>
+                    <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.nombre %> </p></a></li>
+                    <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.email %> </p></a></li>
+                    <li class="list_index2"><a href="/user/detalle/<%= user.id %>" class=""><p></p><%= user.telefono %> </p></a></li>   
+                    <li class="list_index50"><img src="/img/imgUsers/<%= user.imagen %>"></li>             
+                  </ul>
+                   <% }) %>
+                </nav>
+               
+              </div>
+                      
+              <div class="div-bottom">
+                <a href="/"><button class="bottom-log-continuar" type="submit">Volver a pagina principal 
+                </button>
+                </a>
+              </div> 
+        </div>
+    </main>
+
+    <footer>
+        <%- include("./partials/footer-log-reg") %>
+    </footer>
+  </body>
+
+</html>

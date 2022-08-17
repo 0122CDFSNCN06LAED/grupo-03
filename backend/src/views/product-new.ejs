@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <%- include("./partials/head") %>
+    
+</head>
+
+
+<body class="body">
+
+    <header>
+        <div class="header-div">
+            <p class="back-arrow"><a class="arrow" href="/"><i class="fa-solid fa-arrow-left-long"></i> </a></p>
+
+        </div>
+
+        <div class="titulo-nuevos productos">
+            <h1 class="nutrifarco">Crear Producto      <img class="img-logo" src="/img/nutri-logo.png"/></h1>  
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div>
+            
+
+            <form action="/product/newProduct" id="newProduct" method="POST" enctype="multipart/form-data" >
+                <div class="div-input">
+                    <h3>Nombre</h3>
+                    <label class="hidden " for="nickname"><br></label>
+                    <input class="input-log" type="text" name="name" id="nickname" placeholder="Nombre" />
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="errors">
+                            <%= errors.name.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Precio</h3>
+                    <label class="hidden" for="nickname"><br></label>
+                    <input class="input-log" type="number" name="price" id="nickname" placeholder="$" />
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="errors">
+                            <%= errors.price.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Contenido</h3>
+                    <label class="hidden" for="nickname"> <br></label>
+                    <input class="input-log" type="number" name="weight" id="nickname" placeholder="Contenido" />
+                    <% if (locals.errors && errors.weight) { %>
+                        <div class="errors">
+                            <%= errors.weight.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Descripcion</h3>
+                    <label class="hidden" for="nickname"> <br></label>
+                    <input class="input-log" type="text" name="description" id="nickname" placeholder="Descripcion" />
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="errors">
+                            <%= errors.description.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="div-input">
+                    <h3>Categoria</h3>
+                    <label class="hidden" for="nickname"><br></label>
+                    <input class="input-log" type="textd" name="category" id="nickname" placeholder="Id de Categoria" />
+                    <% if (locals.errors && errors.category) { %>
+                        <div class="errors">
+                            <%= errors.category.msg %>
+                        </div>
+                    <% } %>
+                </div>>
+
+                <div class="div-input">
+                    <h3>Imagen </h3>
+                    <label class="hidden " for="nickname"> <br></label>
+                    <input 
+                        type="file" 
+                        id="imagen" 
+                        name="prodImg" 
+                        class="input-log" <%= locals.errors && errors.prodImg ? 'is-invalid' : null %>
+                    >
+                    <% if (locals.errors && errors.prodImg) { %>
+                        <div class="errors">
+                            <%= errors.prodImg.msg %>
+                        </div>
+                    <% } %>
+                </div>
+               
+           
+
+                <div class="div-bottom">
+                    <button class="bottom-log-continuar" type="submit">Agregar</button>
+                    <a href="/product/newProduct"></a>
+                </div>
+
+                    <p class="need-container"><a class="need" href="/help">
+                                Necesito ayuda para ingresar </a>
+                    </p>
+                </div>
+            </form>
+            
+        </div>
+    </main>
+
+    <footer>
+        <%- include("./partials/footer-log-reg") %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <%- include("./partials/head") %>
+</head>
+
+
+  <body class="body">
+
+    <header>
+        <div class="header-div">
+            <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+        </div>
+
+        <h1>
+            NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+        </h1>
+
+    </header>
+
+
+    <main>
+
+        <div>
+            
+
+            <div class="row">
+              <div class="col-12">
+                <h2 class="product">Lista de productos</h2>
+              </div>
+            </div>
+
+            <div>
+              <nav class="menu-list" id="main-nav">
+                <ul class="menu-list">
+                  <li class="list_index1"><a href="" class="">ID</a></li>
+                  <li class="list_index21"><a href="" class="">NOMBRE</a></li>
+                  <li class="list_index22"><a href="" class="">PRECIO</a></li>
+                  <li class="list_index23"><a href="" class="">CONTENIDO</a></li>
+                  <li class="list_index24"><a href="" class="">DESCRIPCION</a></li>
+                  <li class="list_index25"><a href="" class="">CATEGORIA</a></li>
+                  <li class="list_index28"><a href="" class="">IMAGEN</a></li>
+                </ul>
+              </nav>
+            </div>                      
+          </div>
+        
+                
+              <div >
+                <nav class="main-nav" id="main-nav"></nav>
+                  <% resuList.forEach(product => { %>
+                  <ul class="menu-list">
+                    <li class="list_index1"><a href="/product/detalle/<%= product.id %>" class=""><p><%= product.id %> </p></a></li>
+                    <li class="list_index2"><a href="/product/detalle/<%= product.id %>"><p><%= product.name %> </p></a></li>
+                    <li class="list_index2"><a href="/product/detalle/<%= product.id %>"><p></p><p><%= product.price %></p></a></li>
+                    <li class="list_index2"><a href="/product/detalle/<%= product.id %>"><p></p><p><%= product.weight %></p></a></li>
+                    <li class="list_index2"><a href="/product/detalle/<%= product.id %>"><p></p><p><%= product.description %></p></a></li>
+                    <li class="list_index2"><a href="/product/detalle/<%= product.id %>"><p></p><p><%= product.category.name %></p></a></li>
+                    <li class="list_index2"><a href="/product/detalle/<%= product.id %>"><p></p><p><%= product.stock %></p></a></li>
+                    <li class="list_index5"><img src="/img/prodImg/<%= product.image %>"></li>             
+                  </ul>
+                   <% }) %>
+                </nav>
+                
+              </div>
+                      
+              <div class="div-bottom">
+                <a href="/"><button class="bottom-log-continuar" type="submit">Volver a pagina principal 
+                </button>
+                </a>
+              </div> 
+        </div>
+    </main>
+
+    <footer>
+        <%- include("./partials/footer-log-reg") %>
+    </footer>
+  </body>
+
+</html>

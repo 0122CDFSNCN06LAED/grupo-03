@@ -1,0 +1,38 @@
+{
+  "name": "nutrifarco-industries",
+  "version": "1.0.0",
+  "description": "> Nuestro e-commerce ofrecerá cualquier producto producido a partir de la planta Cannabis sativa, en particular el CBD. El uso del\r > CBD va más allá de usos medicinales y nutricionales, sino también \r > están comenzando a ser utilizados en la industria textil hasta la \r > fabricación de materiales resistentes.\r > Incluso pinturas, barnices, jabones, cosméticos, entre otros\r >\r > - **SEMILLA:**\r >\r > - **ALIMENTO:**\r > Aderezos,\r > Aceites para cocina,\r > Margarina,\r > Suplementos alimenticios.\r > \r > - **ACEITES:**\r > \r > - **HIGIENE PERSONAL:**\r > Jabones,\r > Shampoo,\r > Geles de baño,\r > Cosméticos,\r > Lociones,\r > Bálsamo.\r > \r > - **PRODUCTOS INDUSTRIALES:**\r > Pintura en aceite.\r > \r > - **TALLO:**\r >\r > - **FIBRA:**\r >\r > - **TEXTILES DE CONSUMO:**\r > Indumentaria,\r > Calzado.\r >\r > - **PAPEL:**\r > Papeles finos.\r > \r > - **HOJAS Y FLORES:**\r >\r > - **COMPUESTOS ACTIVOS (TH, CBd ENTRE OTROS), TERPENOS ETC.:**\r > Medicinal,\r > Recreacional.\r > \r >\r > - *Servicios:* Asesoramiento sobre la conveniencia del uso y \r > beneficios de las distintas presentaciones del producto-",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon grupo-03/app.js",
+    "dev": "nodemon grupo-03/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0122CDFSNCN06LAED/grupo-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0122CDFSNCN06LAED/grupo-03/issues"
+  },
+  "homepage": "https://github.com/0122CDFSNCN06LAED/grupo-03#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.2",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <%- include("./partials/head") %>
+  </head>
+
+  <body class="body">
+    <header>
+      <div class="header-div">
+        <p class="back-arrow">
+          <a class="arrow" href="/"
+            ><i class="fas fa-arrow-alt-circle-left"></i>
+          </a>
+        </p>
+      </div>
+      <h1>
+        NutriFarco<img
+          class="img"
+          src="./img/baking-1293986_1920.png"
+          class="logo"
+        />
+      </h1>
+    </header>
+
+    <main>
+      <div>
+        <form action="/user/<%= resuEdit.id %>?_method=PUT">
+          <div class="div-input">
+            <h3>Numero de usuario</h3>
+            <label class="hidden" for="nickname"><br /></label>
+            <input
+              class="input-log"
+              type="text"
+              name="nombre"
+              id="nickname"
+              value="<%= resuEdit.id %>"
+            />
+            <% if (locals.errors && errors.nombre) { %>
+            <div class="errors"><%= errors.nombre.msg %></div>
+            <% } %>
+          </div>
+
+          <div class="div-input">
+            <h3>Nombre y apellido</h3>
+            <label class="hidden" for="nickname"><br /></label>
+            <input
+              class="input-log"
+              type="text"
+              name="nombre"
+              id="nickname"
+              value="<%= resuEdit.nombre %>"
+            />
+           
+            <div>
+              <% if (locals.errors && errors.nombre) { %>
+              <div class="errors"><%= errors.nombre.msg %></div>
+              <% } %>
+            </div>
+
+            <div class="div-input">
+              <h3>Correo electronico</h3>
+              <label class="hidden " for="nickname"><br></label>
+              <input class="input-log" type="text" name="email" id="nickname" value=<%= resuEdit.email %> />
+              <% if (locals.errors && errors.email) { %>
+                  <div class="errors">
+                      <%= errors.email.msg %>
+                  </div>
+              <% } %>
+          </div>
+          <input type="submit" value="" />
+        </form>
+
+        <form
+          action="/user/<%= resuEdit.id %>?_method=DELETE"
+          id="userEdit"
+          method="POST"
+          enctype="single/form-data"
+        >
+          <div class="div-bottom">
+            <a href="/"
+              ><button class="bottom-log-continuar" type="submit">
+                Borrar <br /></button
+            ></a>
+          </div>
+        </form>
+
+        <p class="need-container">
+          <a class="need" href="/help"> Necesito ayuda para ingresar </a>
+        </p>
+      </div>
+    </main>
+
+    <footer><%- include("./partials/footer-log-reg") %></footer>
+  </body>
+</html>
